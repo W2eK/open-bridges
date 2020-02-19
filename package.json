@@ -1,0 +1,21 @@
+{
+  "name": "bridges",
+  "version": "1.0.0",
+  "author": "Vladimir Osokin <osokin.home@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "cross-env GATSBY_GRAPHQL_IDE=playground gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^2.19.18",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.0"
+  }
+}
