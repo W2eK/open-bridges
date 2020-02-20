@@ -7,6 +7,9 @@ const useData = () => {
         nodes {
           id
           name
+          schedule
+          moveable
+          river
         }
       }
     }

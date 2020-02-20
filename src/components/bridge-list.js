@@ -1,6 +1,6 @@
 import React from 'react'
 
-import BridgeListItem from './bridge-list-item';
+import BridgeListItem from './bridge-item';
 
 import classNames from '../styles/bridge-list.module.css';
 

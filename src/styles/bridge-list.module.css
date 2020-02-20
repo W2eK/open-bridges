@@ -6,6 +6,6 @@
   border-bottom: none;
 }
 
-.bridge-list li {
-  margin-bottom: 2em;
+.bridge-list li + li {
+  margin-top: 2em;
 }
