@@ -1,0 +1,89 @@
+[
+  {
+    "id": 1,
+    "name": "ЗСД",
+    "moveable": false,
+    "river": "Большая Нева"
+  },
+  {
+    "id": 2,
+    "name": "Благовещенский",
+    "moveable": true,
+    "schedule": ["1:25", "2:45", "3:10", "5:00"],
+    "river": "Большая Нева"
+  },
+  {
+    "id": 3,
+    "name": "Дворцовый",
+    "moveable": true,
+    "schedule": ["1:10", "2:50", "3:10", "4:55"],
+    "river": "Большая Нева"
+  },
+  {
+    "id": 4,
+    "name": "ЗСД",
+    "moveable": false,
+    "river": "Малая Нева"
+  },
+  {
+    "id": 5,
+    "name": "Бетанкура",
+    "moveable": false,
+    "river": "Малая Нева"
+  },
+  {
+    "id": 6,
+    "name": "Тучков",
+    "moveable": true,
+    "schedule": ["2:00", "2:55", "3:35", "4:55"],
+    "river": "Малая Нева"
+  },
+  {
+    "id": 7,
+    "name": "Биржевой",
+    "moveable": true,
+    "schedule": ["2:00", "2:55", "3:35", "4:55"],
+    "river": "Малая Нева"
+  },
+  {
+    "id": 8,
+    "name": "Троицкий",
+    "moveable": true,
+    "schedule": ["1:20", "4:50"],
+    "river": "Нева"
+  },
+  {
+    "id": 9,
+    "name": "Литейный",
+    "moveable": true,
+    "schedule": ["1:40", "4:45"],
+    "river": "Нева"
+  },
+  {
+    "id": 10,
+    "name": "Большеохтинский",
+    "moveable": true,
+    "schedule": ["2:00", "5:00"],
+    "river": "Нева"
+  },
+  {
+    "id": 11,
+    "name": "Александра Невского",
+    "moveable": true,
+    "schedule": ["2:20", "5:10"],
+    "river": "Нева"
+  },
+  {
+    "id": 12,
+    "name": "Володарский",
+    "moveable": true,
+    "schedule": ["2:00", "3:45", "4:15", "5:45"],
+    "river": "Нева"
+  },
+  {
+    "id": 13,
+    "name": "Большой Обуховский",
+    "moveable": false,
+    "river": "Нева"
+  }
+]
