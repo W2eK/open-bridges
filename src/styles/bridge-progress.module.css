@@ -1,0 +1,11 @@
+.bridge-progress {
+  display: flex;
+}
+
+.bridge-progress div {
+  border-bottom: 1px solid var(--color-active);
+}
+
+.bridge-progress div:nth-child(even) {
+  border-bottom-style: dotted;
+}

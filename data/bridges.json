@@ -3,6 +3,7 @@
     "id": 1,
     "name": "ЗСД",
     "moveable": false,
+    "schedule": [],
     "river": "Большая Нева"
   },
   {
@@ -23,12 +24,14 @@
     "id": 4,
     "name": "ЗСД",
     "moveable": false,
+    "schedule": [],
     "river": "Малая Нева"
   },
   {
     "id": 5,
     "name": "Бетанкура",
     "moveable": false,
+    "schedule": [],
     "river": "Малая Нева"
   },
   {
@@ -84,6 +87,7 @@
     "id": 13,
     "name": "Большой Обуховский",
     "moveable": false,
+    "schedule": [],
     "river": "Нева"
   }
 ]
