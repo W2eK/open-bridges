@@ -1,0 +1,11 @@
+.bridge-list {
+  margin: 3em;
+  padding: 0 1em;
+  border: 1px dashed var(--color-inactive);
+  border-top: none;
+  border-bottom: none;
+}
+
+.bridge-list li {
+  margin-bottom: 2em;
+}

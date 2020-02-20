@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import useData from '../hooks/use-data';
 
 import BranchSelector from '../components/branch-selector';
+import BridgeList from '../components/bridge-list';
 
 const Schedule = () => {
   const data = useData();
@@ -12,7 +13,7 @@ const Schedule = () => {
   return (
     <>
       <BranchSelector branches={['Большая Нева', 'Малая Нева']} branch={branch} setBranch={setBranch}/>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
+      <BridgeList bridges={data}/>
     </>
   )
 };
