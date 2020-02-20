@@ -6,6 +6,13 @@ module.exports = {
     lang: 'ru'
   },
   plugins: [
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: './data/'
+      }
+    },
+    'gatsby-transformer-json'
   ]
 }
