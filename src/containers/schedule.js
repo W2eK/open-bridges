@@ -7,8 +7,8 @@ import BranchSelector from '../components/branch-selector';
 const Schedule = () => {
   const data = useData();
   const [branch, setBranch] = useState(0)
-  window.setBranch = setBranch;
-  window.branch = branch;
+  window.addGlobalVariables({branch, setBranch})
+    console.log('goodbye')
   return (
     <>
       <BranchSelector branches={['Большая Нева', 'Малая Нева']} branch={branch} setBranch={setBranch}/>
