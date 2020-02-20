@@ -59,7 +59,8 @@ const Meta = () => {
 Meta.defaultProps = {
   lang: 'ru',
   meta: [],
-  description: ''
+  description: '',
+  title: ''
 };
 
 Meta.propTypes = {
