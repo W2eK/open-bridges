@@ -3,6 +3,9 @@
 :root {
   box-sizing: border-box;
   font-size: 16px;
+  /* --color-active: hsl(0, 0, .1); */
+  --color-active: #222;
+  --color-inactive: #ccc;
 }
 
 *,
@@ -15,6 +18,11 @@
 body {
   margin: 0;
   font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1;
-  color: #222;
+  line-height: 1.2;
+  color: var(--color-active);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
 }

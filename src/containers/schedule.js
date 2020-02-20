@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import useData from '../hooks/use-data';
 
+import BranchSelector from '../components/branch-selector';
+
 const Schedule = () => {
   const data = useData();
+  const [branch, setBranch] = useState(0)
+  window.setBranch = setBranch;
+  window.branch = branch;
   return (
     <>
-      <pre>Hello World</pre>
+      <BranchSelector branches={['Большая Нева', 'Малая Нева']} branch={branch} setBranch={setBranch}/>
       <pre>{JSON.stringify(data, null, 2)}</pre>
     </>
   )

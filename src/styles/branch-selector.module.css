@@ -1,0 +1,38 @@
+.branch-selector {
+  display: flex;
+  height: 3em;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  color: var(--color-inactive);
+  position: relative;
+}
+.branch-selector li {
+  flex: 1;
+}
+
+.branch-selector label {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height: 100%;
+  font-size: .875em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+.branch-selector input {
+  position: absolute;
+  display: none;
+}
+
+.branch-selector input[type="radio"]:checked+label {
+  color: var(--color-active);
+  cursor: default;
+}
+
+.branch-selector__outline {
+  background-color: var(--color-active);
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+}
