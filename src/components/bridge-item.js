@@ -1,6 +1,8 @@
 import React from 'react';
 import { parseTime, DURATION } from '../utils/time-parser';
+
 import BridgeProgress from './bridge-progress';
+import BridgeTime from './bridge-time';
 import classNames from '../styles/bridge-item.module.css';
 
 const BridgeItem = props => {
@@ -13,7 +15,7 @@ const BridgeItem = props => {
     <li className={classNames.bridgeItem}>
       <h4>{name}</h4>
       <BridgeProgress segments={segments} />
-      <div>{moveable ? schedule.map((t, i) => i % 2 === 0 ? t + ' ↑\t'  : '\t↓ ' + t).join(' ') : 'не разводится'}</div>
+      <BridgeTime segments={segments} schedule={schedule} moveable={moveable} />
     </li>
   );
 };

@@ -1,0 +1,12 @@
+.bridge-time {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bridge-time span {
+  font-size: .875em;
+}
+
+.bridge-time span:nth-child(2), .bridge-time span:nth-child(5) {
+  text-align: right;
+}
