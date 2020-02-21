@@ -1,10 +1,18 @@
 .bridge-time {
   display: flex;
-  justify-content: space-between;
 }
 
 .bridge-time span {
-  font-size: .875em;
+  font-size: .875rem;
+}
+
+.bridge-time span + span {
+  margin-left: .5em;
+}
+
+.bridge-time > span {
+  display: flex;
+  justify-content: space-between;
 }
 
 .bridge-time span:nth-child(2), .bridge-time span:nth-child(5) {
