@@ -1,11 +1,21 @@
 .bridge-progress {
   display: flex;
+  position: relative;
 }
 
-.bridge-progress div {
-  border-bottom: 1px solid var(--color-active);
+.bridge-progress__segments {
+  border-bottom: 1px solid var(--color-inactive);
 }
 
-.bridge-progress div:nth-child(even) {
+.bridge-progress__segments:nth-child(even) {
   border-bottom-style: dotted;
+}
+
+div.bridge-progress__dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--color-inactive);
+  transform: translate(-35%, -35%);
 }

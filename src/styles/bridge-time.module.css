@@ -1,5 +1,18 @@
 .bridge-time {
   display: flex;
+  color: var(--color-inactive);
+}
+
+.bridge-time__active {
+  font-weight: bold;
+}
+
+.bridge-time__active:nth-child(odd) {
+  color: var(--color-positive);
+}
+
+.bridge-time__active:nth-child(even) {
+  color: var(--color-negative);
 }
 
 .bridge-time span {
