@@ -1,23 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
+
+import useMeta from '../hooks/use-meta';
 
 const Meta = () => {
-  const { site: { siteMetadata: { title, description, author, lang }} } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-            lang
-          }
-        }
-      }
-    `
-  );
+  const {title, description, author, lang} = useMeta();
   return (
     <Helmet
       htmlAttributes={{ lang }}
@@ -54,20 +41,6 @@ const Meta = () => {
       ]}
     />
   );
-};
-
-Meta.defaultProps = {
-  lang: 'ru',
-  meta: [],
-  description: '',
-  title: ''
-};
-
-Meta.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired
 };
 
 export default Meta;
