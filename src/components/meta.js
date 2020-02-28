@@ -1,10 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-import useMeta from '../hooks/use-meta';
-
-const Meta = () => {
-  const {title, description, author, lang} = useMeta();
+const Meta = ({meta}) => {
+  const {title, description, author, lang} = meta;
   return (
     <Helmet
       htmlAttributes={{ lang }}

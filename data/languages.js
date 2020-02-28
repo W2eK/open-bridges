@@ -1,4 +1,4 @@
 module.exports = {
-  defaultLang: 'ru',
-  fallbackLang: 'en'
+  langs: ['ru', 'en'],
+  fallback: 'en'
 }

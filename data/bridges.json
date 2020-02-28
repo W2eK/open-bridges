@@ -1,93 +1,148 @@
 [
   {
     "id": 1,
-    "name": "ЗСД",
+    "name": {
+      "en": "ZSD",
+      "ru": "ЗСД"
+    },
+    "description": {
+      "en": "toll motorway",
+      "ru": "платная автомагистраль"
+    },
     "moveable": false,
     "schedule": [],
-    "river": "Большая Нева"
+    "river": 1
   },
   {
     "id": 2,
-    "name": "Благовещенский",
+    "name": {
+      "en": "Blagoveshchensky",
+      "ru": "Благовещенский"
+    },
     "moveable": true,
     "schedule": ["1:25", "2:45", "3:10", "5:00"],
-    "river": "Большая Нева"
+    "river": 1
   },
   {
     "id": 3,
-    "name": "Дворцовый",
+    "name": {
+      "en": "Dvortsoviy",
+      "ru": "Дворцовый"
+    },
     "moveable": true,
     "schedule": ["1:10", "2:50", "3:10", "4:55"],
-    "river": "Большая Нева"
+    "river": 1
   },
   {
     "id": 4,
-    "name": "ЗСД",
+    "name": {
+      "en": "ZSD",
+      "ru": "ЗСД"
+    },
     "moveable": false,
+    "description": {
+      "en": "toll motorway",
+      "ru": "платная автомагистраль"
+    },
     "schedule": [],
-    "river": "Малая Нева"
+    "river": 2
   },
   {
     "id": 5,
-    "name": "Бетанкура",
+    "name": {
+      "en": "Betancourt",
+      "ru": "Бетанкура"
+    },
     "moveable": false,
+    "description": {
+      "en": "non drawable",
+      "ru": "не разводной"
+    },
     "schedule": [],
-    "river": "Малая Нева"
+    "river": 2
   },
   {
     "id": 6,
-    "name": "Тучков",
+    "name": {
+      "en": "Tuchkov",
+      "ru": "Тучков"
+    },
     "moveable": true,
     "schedule": ["2:00", "2:55", "3:35", "4:55"],
-    "river": "Малая Нева"
+    "river": 2
   },
   {
     "id": 7,
-    "name": "Биржевой",
+    "name": {
+      "en": "Birzhevoy",
+      "ru": "Биржевой"
+    },
     "moveable": true,
     "schedule": ["2:00", "2:55", "3:35", "4:55"],
-    "river": "Малая Нева"
+    "river": 2
   },
   {
     "id": 8,
-    "name": "Троицкий",
+    "name": {
+      "en": "Troitskiy",
+      "ru": "Троицкий"
+    },
     "moveable": true,
     "schedule": ["1:20", "4:50"],
-    "river": "Нева"
+    "river": 3
   },
   {
     "id": 9,
-    "name": "Литейный",
+    "name": {
+      "en": "Liteyny",
+      "ru": "Литейный"
+    },
     "moveable": true,
     "schedule": ["1:40", "4:45"],
-    "river": "Нева"
+    "river": 3
   },
   {
     "id": 10,
-    "name": "Большеохтинский",
+    "name": {
+      "en": "Bolsheokhtinsky",
+      "ru": "Большеохтинский"
+    },
     "moveable": true,
     "schedule": ["2:00", "5:00"],
-    "river": "Нева"
+    "river": 3
   },
   {
     "id": 11,
-    "name": "Александра Невского",
+    "name": {
+      "en": "Alexander Nevsky",
+      "ru": "Александра Невского"
+    },
     "moveable": true,
     "schedule": ["2:20", "5:10"],
-    "river": "Нева"
+    "river": 3
   },
   {
     "id": 12,
-    "name": "Володарский",
+    "name": {
+      "en": "Volodarsky",
+      "ru": "Володарский"
+    },
     "moveable": true,
     "schedule": ["2:00", "3:45", "4:15", "5:45"],
-    "river": "Нева"
+    "river": 3
   },
   {
     "id": 13,
-    "name": "Большой Обуховский",
+    "name": {
+      "en": "Bolshoy Obukhovsky",
+      "ru": "Большой Обуховский"
+    },
     "moveable": false,
+    "description": {
+      "en": "toll motorway",
+      "ru": "автомагистраль"
+    },
     "schedule": [],
-    "river": "Нева"
+    "river": 3
   }
 ]
