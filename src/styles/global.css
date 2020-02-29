@@ -3,6 +3,7 @@
 :root {
   box-sizing: border-box;
   font-size: 16px;
+  --color-background: #ffffff;
   --color-active: #222222;
   --color-inactive: #b3b3b3;
   --color-positive: #37efba;
@@ -27,4 +28,9 @@ body {
 ul {
   list-style: none;
   padding-left: 0;
+}
+
+.transitionable {
+  transition-duration: .3s;
+  transition-timing-function: ease-out;
 }

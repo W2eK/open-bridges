@@ -1,6 +1,8 @@
 .main-switcher {
   display: flex;
   align-items: flex-end;
+  transition-property: margin-left, margin-top;
+  transition-delay: 0s, .35s;
 }
 
 .main-switcher > ul {

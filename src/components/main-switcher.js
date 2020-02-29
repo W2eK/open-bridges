@@ -3,6 +3,7 @@ import React from 'react';
 import classNames from '../styles/main-switcher.module.css';
 
 const MainSwitcher = props => {
+  console.log(classNames)
   const { branches, currentBranch } = props;
   const maxSize = Math.max(...branches.map(({ props }) => props.bridges.length));
   const currentSize = branches[currentBranch].props.bridges.length;
@@ -12,7 +13,7 @@ const MainSwitcher = props => {
     marginTop: `calc(${(1 - currentSize / maxSize) * -100}% + ${(maxSize - currentSize) * 9}px)`
   };
   return (
-    <div className={classNames.mainSwitcher} style={style}>
+    <div className={classNames.mainSwitcher + ' transitionable'} style={style}>
       {branches}
     </div>
   );

@@ -4,6 +4,8 @@
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   color: var(--color-inactive);
   position: relative;
+  background-color: var(--color-background);
+  z-index: 1;
 }
 .branch-selector li {
   flex: 1;
@@ -19,6 +21,7 @@
   font-weight: bold;
   text-align: center;
   cursor: pointer;
+  transition-property: color;
 }
 .branch-selector input {
   position: absolute;
@@ -35,4 +38,5 @@
   position: absolute;
   bottom: 0;
   height: 1px;
+  transition-property: left;
 }
