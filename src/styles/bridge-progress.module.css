@@ -1,6 +1,7 @@
 .bridge-progress {
   display: flex;
   position: relative;
+  height: 0;
 }
 
 .bridge-progress__segments {

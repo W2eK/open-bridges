@@ -1,7 +1,6 @@
 import React from 'react'
 import classNames from '../styles/bridge-progress.module.css';
 
-console.log(classNames)
 const BridgeProgress = props => {
   const { segments, current, time } = props;
   return (

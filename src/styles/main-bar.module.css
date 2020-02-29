@@ -1,0 +1,31 @@
+.main-bar {
+  display: flex;
+  background-color: white;
+  height: 3.5em;
+  z-index: 1;
+  padding: 1em;
+}
+
+.main-bar > * + * {
+  margin-left: 1.5em;
+}
+.main-bar h1 {
+  font-family: 'Alfa Slab One';
+  font-size: 1.5em;
+  margin-right: auto;
+  letter-spacing: 0.05em;
+  line-height: 1em;
+  display: flex;
+}
+.main-bar h1 > span > span {
+  text-decoration: underline;
+}
+
+.main-bar h1 > span:first-child::after {
+  content: "/";
+  margin-right: .5em;
+}
+
+.main-bar h1 > span:last-child::before {
+  content: "\\";
+}

@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 import BranchSelector from './branch-selector';
 import BridgeList from './bridge-list';
 import MainSwitcher from './main-switcher';
+import MainBar from './main-bar';
 
 const MainContainer = props => {
-  const { bridges, rivers } = props;
+  const { bridges, rivers, setLang } = props;
   const [currentBranch, setBranch] = useState(0);
   const [time, setTime] = useState('3:00');
   window.addGlobalVariables({ currentBranch, setBranch, time, setTime });
@@ -17,6 +18,7 @@ const MainContainer = props => {
 
   return (
     <>
+      <MainBar setLang={setLang}/>
       <BranchSelector
         branches={rivers.slice(0, 2)}
         currentBranch={currentBranch}
