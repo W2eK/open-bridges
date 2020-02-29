@@ -1,12 +1,10 @@
 import React from 'react';
 
-import styles from '../styles/branch-selector.module.css';
-
-console.log(styles);
+import classNames from '../styles/branch-selector.module.css';
 
 const BranchSelector = props => {
-  const {branches, branch, setBranch } = props;
-  const rederInputs = (name, i) => (
+  const {branches, currentBranch, setBranch } = props;
+  const rederInputs = ({ name }, i) => (
     <li key={name}>
       <input
         id={name}
@@ -15,7 +13,7 @@ const BranchSelector = props => {
         name="branch-selector"
         role="tab"
         onChange={() => setBranch(i)}
-        checked={i === branch}
+        checked={i === currentBranch}
       />
       <label htmlFor={name}>{name}</label>
     </li>
@@ -23,13 +21,13 @@ const BranchSelector = props => {
   const inputs = branches.map(rederInputs)
   const spanWidth = 100 / branches.length;
   return (
-    <ul className={styles.branchSelector}>
+    <ul className={classNames.branchSelector}>
       {inputs}
       <span
-        className={styles.branchSelector__outline}
+        className={classNames.branchSelector__outline}
         style={{
           width: `${spanWidth}%`,
-          left: `${branch * spanWidth}%`
+          left: `${currentBranch * spanWidth}%`
         }}
       />
     </ul>

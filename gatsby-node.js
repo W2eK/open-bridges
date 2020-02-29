@@ -39,7 +39,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         args: {
           lang: {
             type: 'String!',
-            defaultValue: 'en'
+            defaultValue: 'ru'
           }
         },
         resolve(source, args, context, info) {

@@ -4,7 +4,7 @@ import { getUserLocale } from 'get-user-locale';
 
 import { LangProvider } from '../hooks/lang-context';
 import Meta from '../components/meta';
-import Schedule from '../containers/schedule';
+import MainContainer from '../components/main-container';
 
 const App = props => {
   const locale = getUserLocale().split('-')[0];
@@ -22,7 +22,7 @@ const App = props => {
   return (
     <LangProvider value={{ lang }}>
       <Meta meta={siteMetadata} />
-      <Schedule bridges={bridges} rivers={rivers}/>
+      <MainContainer bridges={bridges} rivers={rivers}/>
     </LangProvider>
   );
 };

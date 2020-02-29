@@ -1,0 +1,8 @@
+.main-switcher {
+  display: flex;
+  align-items: flex-end;
+}
+
+.main-switcher > ul {
+  flex: 1;
+}
