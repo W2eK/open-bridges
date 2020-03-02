@@ -1,14 +1,9 @@
 .bridge-list {
-  margin-top: var(--layout-margin);
+  margin-top: 2em;
   padding: 0 var(--layout-padding);
   border: 1px dashed var(--color-inactive);
   border-top: none;
   border-bottom: none;
-}
-@media (min-width: 40em) {
-  .bridge-list {
-    margin-top: 4em;
-  }
 }
 
 

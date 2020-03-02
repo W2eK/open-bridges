@@ -2,6 +2,10 @@
   margin-top: .5em;
 }
 
+.bridge-item__dummy {
+  height: 3em;
+}
+
 .bridge-item__inactive {
   color: var(--color-inactive);
 }

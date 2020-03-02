@@ -1,10 +1,9 @@
 import React from 'react';
-import { parseTime, scaler, FROM } from '../utils/time-parser';
+import { parseTime, scaler } from '../utils/time-parser';
 import classNames from '../styles/main-time.module.css';
 
 const MainTime = props => {
   const { time } = props;
-  console.log(FROM)
   const width = `calc(${scaler(parseTime(time)) * 100}% - var(--layout-padding))`;
   return (
     <div className={classNames.mainTime__wrapper + ' wrapper'}>

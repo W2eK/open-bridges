@@ -1,6 +1,5 @@
 .branch-switcher__wrapper {
   overflow: hidden;
-  z-index: -1;
   position: relative;
 }
 .branch-switcher {
@@ -8,7 +7,10 @@
   align-items: flex-end;
   transition-property: transform, margin-top;
   transition-delay: 0s, calc(var(--transition-time) + .05s);
-  /* position: relative; */
+}
+
+.branch-switcher__to-max {
+  transition-delay: calc(var(--transition-time) + .05s), 0s;
 }
 
 .branch-switcher > ul {

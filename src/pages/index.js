@@ -57,9 +57,7 @@ export const query = graphql`
         description(lang: $lang)
         schedule
         moveable
-        river {
-          id
-        }
+        branch
       }
     }
     allRiversJson {

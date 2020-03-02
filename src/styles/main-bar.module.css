@@ -1,7 +1,7 @@
 .main-bar__wrapper {
   background-color: white;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 .main-bar {
   display: flex;

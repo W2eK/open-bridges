@@ -65,14 +65,6 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         extensions: {
           lang: {}
         }
-      },
-      river: {
-        type: 'RiversJson!',
-        resolve: (source, args, context, info) => {
-          return context.nodeModel
-            .getAllNodes({ type: 'RiversJson' })
-            .find(river => river.id == source.river);
-        }
       }
     },
     interfaces: ['Node']
