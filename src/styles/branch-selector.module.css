@@ -1,11 +1,13 @@
+.branch-selector__wrapper {
+  background-color: var(--color-background);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  position: sticky;
+  top: 0;
+}
 .branch-selector {
   display: flex;
   height: 3em;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   color: var(--color-inactive);
-  position: relative;
-  background-color: var(--color-background);
-  z-index: -1;
 }
 .branch-selector li {
   flex: 1;

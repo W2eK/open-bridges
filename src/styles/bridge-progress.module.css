@@ -1,6 +1,7 @@
 .bridge-progress {
   display: flex;
   position: relative;
+  z-index: -1;
   height: 0;
 }
 

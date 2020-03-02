@@ -5,3 +5,7 @@
 .bridge-item__inactive {
   color: var(--color-inactive);
 }
+
+.bridge-item h4 {
+  cursor: pointer;
+}

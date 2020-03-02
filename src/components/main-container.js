@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
-import BranchSelector from './branch-selector';
+// import BranchSelector from './branch-selector';
+// import MainSwitcher from './main-switcher';
+import BranchSwitcher from './branch-switcher';
 import BridgeList from './bridge-list';
-import MainSwitcher from './main-switcher';
 import MainBar from './main-bar';
 
 const MainContainer = props => {
@@ -18,17 +19,14 @@ const MainContainer = props => {
 
   return (
     <>
-      <MainBar setLang={setLang}/>
-      <BranchSelector
-        branches={rivers.slice(0, 2)}
+      <MainBar setLang={setLang} />
+      <BranchSwitcher
+        rivers={rivers.slice(0, 2)}
+        branches={branches.slice(0, 2)}
         currentBranch={currentBranch}
         setBranch={setBranch}
       />
-      <MainSwitcher
-        branches={branches.slice(0, 2)}
-        currentBranch={currentBranch}
-      />
-      {branches[2]}
+      <div className="wrapper" style={{marginBottom: 'var(--layout-margin)'}}>{branches[2]}</div>
     </>
   );
 };
