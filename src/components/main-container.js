@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 
-// import BranchSelector from './branch-selector';
-// import MainSwitcher from './main-switcher';
+import MainBar from './main-bar';
 import BranchSwitcher from './branch-switcher';
 import BridgeList from './bridge-list';
-import MainBar from './main-bar';
+import MainTime from './main-time';
 
 const MainContainer = props => {
   const { bridges, rivers, setLang } = props;
@@ -18,7 +17,7 @@ const MainContainer = props => {
   });
 
   return (
-    <>
+    <div style={{height: '100%', paddingBottom: 'var(--layout-margin)', position: 'relative'}}>
       <MainBar setLang={setLang} />
       <BranchSwitcher
         rivers={rivers.slice(0, 2)}
@@ -26,8 +25,9 @@ const MainContainer = props => {
         currentBranch={currentBranch}
         setBranch={setBranch}
       />
-      <div className="wrapper" style={{marginBottom: 'var(--layout-margin)'}}>{branches[2]}</div>
-    </>
+      <div className="wrapper">{branches[2]}</div>
+      <MainTime time={time}/>
+    </div>
   );
 };
 
