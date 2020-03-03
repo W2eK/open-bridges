@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
+import ModeContext from '../hooks/mode-context';
 import classNames from '../styles/branch-selector.module.css';
 
 const BranchSelector = props => {
-  const { rivers, currentBranch, setBranch } = props;
+  const { rivers, setMode } = props;
+  const mode = useContext(ModeContext);
   const rederInputs = ({ name }, i) => (
     <li key={name}>
       <input
@@ -12,8 +14,8 @@ const BranchSelector = props => {
         type="radio"
         name="branch-selector"
         role="tab"
-        onChange={() => setBranch(i)}
-        checked={i === currentBranch}
+        onChange={() => setMode(i)}
+        checked={i === mode}
       />
       <label htmlFor={name} className={'transitionable'}>
         {name}
@@ -30,7 +32,7 @@ const BranchSelector = props => {
           className={classNames.branchSelector__outline + ' transitionable'}
           style={{
             width: `${spanWidth}%`,
-            left: `${currentBranch * spanWidth}%`
+            left: `${mode * spanWidth}%`
           }}
         />
       </ul>
