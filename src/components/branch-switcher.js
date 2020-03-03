@@ -6,10 +6,10 @@ import classNames from '../styles/branch-switcher.module.css';
 
 const BranchSwitcher = props => {
   const { branches, rivers, setBranch, currentBranch, time } = props;
-  const constant = branches.slice(-1)[0];
-  const switchable = branches.slice(0, 2);
+  const constant = branches.get(0);
+  const switchable = [branches.get(1), branches.get(2)];
   const maxSize = Math.max(...switchable.map(({ length }) => length));
-  const currentSize = branches[currentBranch].length;
+  const currentSize = switchable[currentBranch].length;
   const switchStyle = {
     transform: `translateX(calc(${currentBranch * -100}% - ${10 *
       currentBranch}vw))`,

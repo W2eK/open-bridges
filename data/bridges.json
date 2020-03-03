@@ -11,7 +11,7 @@
     },
     "moveable": false,
     "schedule": [],
-    "branch": 3
+    "branch": 0
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     },
     "moveable": true,
     "schedule": ["1:25", "2:45", "3:10", "5:00"],
-    "branch": 0
+    "branch": 1
   },
   {
     "id": 3,
@@ -31,7 +31,7 @@
     },
     "moveable": true,
     "schedule": ["1:10", "2:50", "3:10", "4:55"],
-    "branch": 0
+    "branch": 1
   },
   {
     "id": 5,
@@ -45,7 +45,7 @@
       "ru": "не разводной"
     },
     "schedule": [],
-    "branch": 1
+    "branch": 2
   },
   {
     "id": 6,
@@ -55,7 +55,7 @@
     },
     "moveable": true,
     "schedule": ["2:00", "2:55", "3:35", "4:55"],
-    "branch": 1
+    "branch": 2
   },
   {
     "id": 7,
@@ -65,7 +65,7 @@
     },
     "moveable": true,
     "schedule": ["2:00", "2:55", "3:35", "4:55"],
-    "branch": 1
+    "branch": 2
   },
   {
     "id": 8,
@@ -75,7 +75,7 @@
     },
     "moveable": true,
     "schedule": ["1:20", "4:50"],
-    "branch": 2
+    "branch": 3
   },
   {
     "id": 9,
@@ -85,7 +85,7 @@
     },
     "moveable": true,
     "schedule": ["1:40", "4:45"],
-    "branch": 2
+    "branch": 4
   },
   {
     "id": 10,
@@ -95,7 +95,7 @@
     },
     "moveable": true,
     "schedule": ["2:00", "5:00"],
-    "branch": 2
+    "branch": 4
   },
   {
     "id": 11,
@@ -105,7 +105,7 @@
     },
     "moveable": true,
     "schedule": ["2:20", "5:10"],
-    "branch": 2
+    "branch": 4
   },
   {
     "id": 12,
@@ -115,7 +115,7 @@
     },
     "moveable": true,
     "schedule": ["2:00", "3:45", "4:15", "5:45"],
-    "branch": 2
+    "branch": 4
   },
   {
     "id": 13,
@@ -129,6 +129,6 @@
       "ru": "автомагистраль"
     },
     "schedule": [],
-    "branch": 2
+    "branch": 4
   }
 ]

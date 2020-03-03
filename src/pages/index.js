@@ -6,13 +6,12 @@ import Meta from '../components/meta';
 import MainContainer from '../components/main-container';
 
 const App = props => {
-  
   const {
     path,
     data: {
       site: { siteMetadata },
-      allBridgesJson: { nodes: bridges },
-      allLabelsJson: { nodes: labels }
+      allBridgesJson,
+      allLabelsJson
     }
   } = props;
   if (path === '/') {
@@ -23,15 +22,23 @@ const App = props => {
   }
   const setLang = () => {
     const lang = path.split('/')[1];
-    const { langs } = siteMetadata.languages
+    const { langs } = siteMetadata.languages;
     const index = langs.indexOf(lang);
-    const next = index + 1 === langs.length ? 0 : index + 1
+    const next = index + 1 === langs.length ? 0 : index + 1;
     navigate('/' + langs[next] + '/');
-  }
+  };
+  const branches = allBridgesJson.nodes.reduce((map, bridge) => {
+    const id = parseInt(bridge.branch);
+    map.has(id) ? map.get(id).push(bridge) : map.set(id, [bridge]);
+    return map;
+  }, new Map());
+  const labels = new Map(
+    allLabelsJson.nodes.map(label => [parseInt(label.id), label])
+  );
   return (
     <>
       <Meta meta={siteMetadata} />
-      <MainContainer bridges={bridges} labels={labels} setLang={setLang}/>
+      <MainContainer branches={branches} labels={labels} setLang={setLang} />
     </>
   );
 };

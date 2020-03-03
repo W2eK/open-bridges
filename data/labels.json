@@ -26,5 +26,40 @@
       "en": "Great Nevka",
       "ru": "Большая Невка"
     }
+  },
+  {
+    "id": 5,
+    "name": {
+      "en": "City Center",
+      "ru": "Центр Города"
+    }
+  },
+  {
+    "id": 6,
+    "name": {
+      "en": "Vasilyevsky island",
+      "ru": "Васильевский остров"
+    }
+  },
+  {
+    "id": 7,
+    "name": {
+      "en": "Petrograd side",
+      "ru": "Петроградская сторона"
+    }
+  },
+  {
+    "id": 8,
+    "name": {
+      "en": "Vyborg side",
+      "ru": "Выборгская сторона"
+    }
+  },
+  {
+    "id": 9,
+    "name": {
+      "en": "Peski",
+      "ru": "Пески"
+    }
   }
 ]
