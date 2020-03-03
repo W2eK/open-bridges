@@ -7,12 +7,12 @@
   display: flex;
   align-items: flex-end;
   transition-property: transform, margin-top;
-  transition-delay: 0s, calc(var(--transition-time) + .05s);
+  /* transition-delay: 0s, calc(var(--transition-time) + .05s); */
 }
 
-.branch-switcher__to-max {
+/* .branch-switcher__to-max {
   transition-delay: calc(var(--transition-time) + .05s), 0s;
-}
+} */
 
 .branch-switcher > ul {
   min-width: 100%;

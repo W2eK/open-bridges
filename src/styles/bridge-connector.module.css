@@ -1,10 +1,25 @@
 .bridge-connector {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .bridge-connector div {
   border-left: 1px dashed var(--color-inactive);
   height: 50%;
   transition-property: height;
+}
+
+.bridge-connector span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  line-height: 1em;
+  transform: translate(-50%, -50%);
+  color: var(--color-inactive);
+  font-style: italic;
+  text-align: center;
+  font-size: .75em;
+  white-space: nowrap;
+  transition-property: left;
 }

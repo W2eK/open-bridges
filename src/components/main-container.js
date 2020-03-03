@@ -42,6 +42,7 @@ const MainContainer = props => {
           currentBranch={currentBranch}
           height="7em"
           getHeight={i => (i === currentBranch ? '100%' : '0')}
+          names={rivers.slice(0, 2).map(({ name }) => name)}
         />
       </div>
       <div className="wrapper">{branches[2]}</div>
