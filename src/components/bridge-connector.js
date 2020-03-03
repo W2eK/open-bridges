@@ -2,9 +2,10 @@ import React from 'react';
 import classNames from '../styles/bridge-connector.module.css';
 
 const BridgeConnector = props => {
-  const { getHeight = () => '100%' } = props;
+  const { condition = () => true } = props;
+  const getHeight = condition => i => (condition(i) ? '0' : '100%');
   const connections = [0, 1]
-    .map(getHeight)
+    .map(getHeight(condition))
     .map((height, i) => (
       <div key={i} className="transitionable" style={{ height }} />
     ));

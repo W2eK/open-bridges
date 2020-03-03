@@ -28,9 +28,9 @@ const MainContainer = props => {
         time={time}
       />
       <div className="wrapper">
-        <BridgeConnector getHeight={i => (i === currentBranch ? '100%' : '0')} />
+        <BridgeConnector condition={i => i !== currentBranch} />
         <BridgeList time={time} bridges={branches.get(3)} />
-        <BridgeConnector getHeight={i => (i ? '0' : '100%')} />
+        <BridgeConnector condition={i => i} />
         <BridgeList time={time} bridges={branches.get(4)} />
       </div>
       <MainTime time={time} />
