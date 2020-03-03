@@ -1,13 +1,13 @@
 import React from 'react';
-import MainLogo from './main-logo';
-import classNames from '../styles/main-bar.module.css';
+import AppLogo from './app-logo';
+import classNames from '../styles/app-bar.module.css';
 
-const MainBar = props => {
+const AppBar = props => {
   const { setLang } = props;
   return (
-    <div className={classNames.mainBar__wrapper + ' wrapper'}>
-      <div className={classNames.mainBar}>
-        <MainLogo />
+    <div className={classNames.appBar__wrapper + ' wrapper'}>
+      <div className={classNames.appBar}>
+        <AppLogo />
         <button type="button">
           <i className="material-icons">search</i>
         </button>
@@ -19,4 +19,4 @@ const MainBar = props => {
   );
 };
 
-export default MainBar;
+export default AppBar;

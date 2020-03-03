@@ -1,4 +1,4 @@
-.main-logo {
+.app-logo {
   font-family: 'Patua One';
   font-size: 1.25em;
   display: flex;
@@ -8,12 +8,12 @@
   flex-wrap: wrap;
   letter-spacing: 0.04em;
 }
-.main-logo > span {
+.app-logo > span {
   display: flex;
   align-items: center;
 }
 
-.main-logo__gap {
+.app-logo__gap {
   flex: 1;
   border-bottom: 1px dotted dodgerblue;
   height: 1.25em;
@@ -22,15 +22,15 @@
 }
 
 /* @media (max-width: 360px) {
-  .main-logo {
+  .app-logo {
     font-size: 5.5vw;
   }
-  .main-logo__gap {
+  .app-logo__gap {
     max-width: 1.5em;
     height: 5.5vw;
   }
 } */
 
-.main-logo__text {
+.app-logo__text {
   text-decoration: underline;
 }

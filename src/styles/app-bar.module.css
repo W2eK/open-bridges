@@ -1,20 +1,20 @@
-.main-bar__wrapper {
+.app-bar__wrapper {
   background-color: white;
   position: relative;
   z-index: 2;
 }
-.main-bar {
+.app-bar {
   display: flex;
   height: 4em;
   align-items: center;
 }
-.main-bar h1 {
+.app-bar h1 {
   margin-right: .75em;
 }
-.main-bar button {
+.app-bar button {
   padding: .75em;
 }
 
-.main-bar button:last-child {
+.app-bar button:last-child {
   margin-right: -.75em;
 }

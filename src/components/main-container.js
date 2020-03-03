@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import MainBar from './main-bar';
+import AppLogo from './app-bar';
 import BranchSwitcher from './branch-switcher';
 import BridgeList from './bridge-list';
 import MainTime from './main-time';
@@ -28,7 +28,7 @@ const MainContainer = props => {
         position: 'relative'
       }}
     >
-      <MainBar setLang={setLang} />
+      <AppLogo setLang={setLang} />
       <BranchSwitcher
         rivers={rivers.slice(0, 2)}
         branches={branches}
