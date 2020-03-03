@@ -12,15 +12,14 @@ const MainContainer = props => {
   const [time, setTime] = useState('3:00');
   window.addGlobalVariables({ currentBranch, setBranch, time, setTime });
 
-  const branches = bridges
-    .reduce((acc, bridge) => {
-      const { branch } = bridge;
-      acc[branch] ? acc[branch].push(bridge) : (acc[branch] = [bridge]);
-      return acc;
-    }, [])
-    .map((branch, i) => {
-      return <BridgeList key={i} time={time} bridges={branch} />;
-    });
+  const branches = bridges.reduce((acc, bridge) => {
+    const { branch } = bridge;
+    acc[branch] ? acc[branch].push(bridge) : (acc[branch] = [bridge]);
+    return acc;
+  }, []);
+  // .map((branch, i) => {
+  //   return <BridgeList key={i} time={time} bridges={branch} />;
+  // });
   return (
     <div
       style={{
@@ -32,10 +31,10 @@ const MainContainer = props => {
       <MainBar setLang={setLang} />
       <BranchSwitcher
         rivers={rivers.slice(0, 2)}
-        constant={branches[3]}
-        branches={branches.slice(0, 2)}
+        branches={branches}
         currentBranch={currentBranch}
         setBranch={setBranch}
+        time={time}
       />
       <div className="wrapper">
         <BridgeConnector
@@ -45,7 +44,9 @@ const MainContainer = props => {
           names={rivers.slice(0, 2).map(({ name }) => name)}
         />
       </div>
-      <div className="wrapper">{branches[2]}</div>
+      <div className="wrapper">
+        <BridgeList time={time} bridges={branches[2]} />
+      </div>
       <MainTime time={time} />
     </div>
   );
