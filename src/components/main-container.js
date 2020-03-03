@@ -4,6 +4,7 @@ import MainBar from './main-bar';
 import BranchSwitcher from './branch-switcher';
 import BridgeList from './bridge-list';
 import MainTime from './main-time';
+import BridgeConnector from './bridge-connector';
 
 const MainContainer = props => {
   const { bridges, rivers, setLang } = props;
@@ -36,6 +37,13 @@ const MainContainer = props => {
         currentBranch={currentBranch}
         setBranch={setBranch}
       />
+      <div className="wrapper">
+        <BridgeConnector
+          currentBranch={currentBranch}
+          height="7em"
+          getHeight={i => (i === currentBranch ? '100%' : '0')}
+        />
+      </div>
       <div className="wrapper">{branches[2]}</div>
       <MainTime time={time} />
     </div>

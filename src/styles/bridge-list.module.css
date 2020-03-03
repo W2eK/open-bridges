@@ -1,5 +1,4 @@
 .bridge-list {
-  margin-top: 2em;
   padding: 0 var(--layout-padding);
   border: 1px dashed var(--color-inactive);
   border-top: none;

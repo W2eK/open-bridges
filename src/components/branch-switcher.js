@@ -1,6 +1,7 @@
 import React from 'react';
 
 import BranchSelector from './branch-selector';
+import BridgeConnector from './bridge-connector';
 import classNames from '../styles/branch-switcher.module.css';
 
 const BranchSwitcher = props => {
@@ -23,6 +24,7 @@ const BranchSwitcher = props => {
       <BranchSelector {...{ rivers, setBranch, currentBranch }} />
       <div className={classNames.branchSwitcher__wrapper + ' wrapper'}>
         {constant}
+        <BridgeConnector/>
         <div
           className={className}
           style={style}

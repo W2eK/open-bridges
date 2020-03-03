@@ -1,0 +1,10 @@
+.bridge-connector {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bridge-connector div {
+  border-left: 1px dashed var(--color-inactive);
+  height: 50%;
+  transition-property: height;
+}
