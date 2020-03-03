@@ -69,8 +69,8 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
     },
     interfaces: ['Node']
   });
-  const RiversJson = buildObjectType({
-    name: 'RiversJson',
+  const LabelsJson = buildObjectType({
+    name: 'LabelsJson',
     fields: {
       name: {
         type: 'String!',
@@ -98,6 +98,6 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
       }
     }
   })
-  const typeDefs = [BridgesJson, RiversJson, SiteMetadata];
+  const typeDefs = [BridgesJson, LabelsJson, SiteMetadata];
   createTypes(typeDefs);
 };

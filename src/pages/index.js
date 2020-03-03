@@ -12,7 +12,7 @@ const App = props => {
     data: {
       site: { siteMetadata },
       allBridgesJson: { nodes: bridges },
-      allRiversJson: { nodes: rivers }
+      allLabelsJson: { nodes: labels }
     }
   } = props;
   if (path === '/') {
@@ -31,7 +31,7 @@ const App = props => {
   return (
     <>
       <Meta meta={siteMetadata} />
-      <MainContainer bridges={bridges} rivers={rivers} setLang={setLang}/>
+      <MainContainer bridges={bridges} labels={labels} setLang={setLang}/>
     </>
   );
 };
@@ -60,7 +60,7 @@ export const query = graphql`
         branch
       }
     }
-    allRiversJson {
+    allLabelsJson {
       nodes {
         id
         name(lang: $lang)

@@ -7,7 +7,7 @@ import MainTime from './main-time';
 import BridgeConnector from './bridge-connector';
 
 const MainContainer = props => {
-  const { bridges, rivers, setLang } = props;
+  const { bridges, labels, setLang } = props;
   const [currentBranch, setBranch] = useState(0);
   const [time, setTime] = useState('3:00');
   window.addGlobalVariables({ currentBranch, setBranch, time, setTime });
@@ -17,9 +17,6 @@ const MainContainer = props => {
     acc[branch] ? acc[branch].push(bridge) : (acc[branch] = [bridge]);
     return acc;
   }, []);
-  // .map((branch, i) => {
-  //   return <BridgeList key={i} time={time} bridges={branch} />;
-  // });
   return (
     <div
       style={{
@@ -30,7 +27,7 @@ const MainContainer = props => {
     >
       <AppLogo setLang={setLang} />
       <BranchSwitcher
-        rivers={rivers.slice(0, 2)}
+        rivers={labels.slice(0, 2)}
         branches={branches}
         currentBranch={currentBranch}
         setBranch={setBranch}
@@ -41,7 +38,7 @@ const MainContainer = props => {
           currentBranch={currentBranch}
           height="7em"
           getHeight={i => (i === currentBranch ? '100%' : '0')}
-          names={rivers.slice(0, 2).map(({ name }) => name)}
+          names={labels.slice(0, 2).map(({ name }) => name)}
         />
       </div>
       <div className="wrapper">
