@@ -11,24 +11,30 @@ const BranchSwitcher = props => {
   );
   const currentSize = branches[currentBranch].props.bridges.length;
   const style = {
-    transform: `translateX(calc(${currentBranch * -100}% - ${10 * currentBranch}vw))`,
+    transform: `translateX(calc(${currentBranch * -100}% - ${10 *
+      currentBranch}vw))`,
     marginTop: `${(currentSize - maxSize) * (3 + 2)}em`
   };
   const className = [
     classNames.branchSwitcher,
     'transitionable',
     currentSize === maxSize ? classNames.branchSwitcher__toMax : ''
-  ].join(' ')
+  ].join(' ');
   return (
     <div>
       <BranchSelector {...{ rivers, setBranch, currentBranch }} />
       <div className={classNames.branchSwitcher__wrapper + ' wrapper'}>
-        {constant}
-        <BridgeConnector/>
         <div
-          className={className}
-          style={style}
+          className="transitionable"
+          style={{
+            marginTop: `${(maxSize - currentSize) * (3 + 2)}em`,
+            transitionProperty: 'margin-top',
+            height: '5em'
+          }}
         >
+          {constant}
+        </div>
+        <div className={className} style={style}>
           {branches}
         </div>
       </div>
