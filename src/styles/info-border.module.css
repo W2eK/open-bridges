@@ -1,0 +1,6 @@
+.info-border {
+  border-left: 1px dashed var(--color-inactive);
+  height: 100%;
+  width: 1px;
+  position: absolute;
+}

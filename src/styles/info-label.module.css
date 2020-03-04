@@ -9,5 +9,7 @@
 
 .info-label span {
   position: relative;
+  pointer-events: all;
+  cursor: pointer;
   /* width: min-content; */
 }

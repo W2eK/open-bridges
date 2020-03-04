@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 
 import LabelContext from '../hooks/label-context';
+import InfoBorder from './info-border';
 import InfoBox from './info-box';
 import InfoLabel from './info-label';
 import InfoIcon from './info-icon';
@@ -20,6 +21,8 @@ import InfoIcon from './info-icon';
 12 Приморская
 13 Старая Деревня
 */
+
+const calc = (a, b = 0, c = 0) => `calc(3em * ${a} + 2em * ${b} + 4em * ${c})`;
 
 const InfoItem = props => {
   const labels = useContext(LabelContext);
@@ -100,10 +103,27 @@ const InfoItem = props => {
     case id === 11 && label:
       // Гутуевский остров
       return (
-        <InfoBox style={{ height: ['3em', '13em'] }} left top align="right">
+        <InfoBox style={{ height: '3em', top: [0, calc(1, 1)], left: [0, '-5em'], opacity: [1, 0] }} left top align="right">
           <InfoLabel label={source} />
         </InfoBox>
       );
+    case id === 13 && label:
+      // Старая Деревня
+      return (
+        <InfoBox style={{ height: '3em', top: [calc(-1, -1), 0], right: ['-5em', 0], opacity: [0, 1] }} right top align="left">
+          <InfoLabel label={source} />
+        </InfoBox>
+      );
+    case id === 'bottom-left' && border:
+      return <InfoBorder bottom left style={{height: [calc(8, 5, 2), calc(6, 4, 1)]}}/>
+    case id === 'bottom-right' && border:
+      return <InfoBorder bottom right style={{height: calc(5, 4)}}/>
+    case id === 'center-right' && border:
+      return <InfoBorder bottom right style={{height: [calc(1), calc(4, 2, 1)]}}/>
+    case id === 'top-right' && border:
+      return <InfoBorder top right style={{height: [calc(3, 2), calc(1)]}}/>
+    case id === 'top-left' && border:
+      return <InfoBorder top left style={{height: [calc(1), calc(4, 3)]}}/>
     default:
       return null;
   }

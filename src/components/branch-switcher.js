@@ -34,6 +34,9 @@ const BranchSwitcher = props => {
           style={constantStyle}
         >
           <BridgeList time={time} bridges={constant}>
+            <InfoItem id="top-right" border />
+            <InfoItem id="top-left" border />
+            <InfoItem id={13} label/>
             <InfoItem id={11} label/>
           </BridgeList>
         </div>
@@ -41,9 +44,14 @@ const BranchSwitcher = props => {
           className={classNames.branchSwitcher + ' transitionable'}
           style={switchStyle}
         >
-          {switchable.map((branch, i) => (
-            <BridgeList key={i} time={time} bridges={branch} />
-          ))}
+          {switchable.map((branch, i) => {
+            const child = i ? <InfoItem id={13} label/> : <InfoItem id={11} label/>
+            return (
+              <BridgeList key={i} time={time} bridges={branch}>
+                {null}
+              </BridgeList>
+            )
+          })}
           <InfoItem id={5} icon/>
           <InfoItem id={6} label/>
           <InfoItem id={6} icon/>

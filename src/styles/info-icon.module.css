@@ -6,4 +6,6 @@
   width: 48px;
   height: auto;
   position: relative;
+  pointer-events: all;
+  cursor: pointer;
 }

@@ -5,6 +5,8 @@ import ModeContext from './mode-context';
 const toKebabCase = string =>
   string.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2').toLowerCase();
 
+// const calcProperty = (a, b = 0, c = 0) => `calc(3em * ${a} + 2em * ${b} + 4em * ${c})`;
+
 const withMode = Wrapped => props => {
   const mode = useContext(ModeContext);
   const { style, top, right, bottom, left, align = 'left' } = props;

@@ -36,6 +36,7 @@ const MainContainer = props => {
           <BridgeList time={time} bridges={branches.get(3)}>
             <InfoItem id={5} label />
             <InfoItem id={7} label />
+            <InfoItem id="center-right" border />
           </BridgeList>
           <BridgeConnector condition={i => i} />
           <BridgeList time={time} bridges={branches.get(4)}>
@@ -43,6 +44,8 @@ const MainContainer = props => {
             <InfoItem id={8} icon />
             <InfoItem id={9} />
             <InfoItem id={10} label />
+            <InfoItem id="bottom-left" border />
+            <InfoItem id="bottom-right" border />
           </BridgeList>
         </div>
         <MainTime time={time} />
