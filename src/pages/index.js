@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql, navigate } from 'gatsby';
 import { getUserLocale } from 'get-user-locale';
 
+import { LabelProvider } from '../hooks/label-context';
 import Meta from '../components/meta';
 import MainContainer from '../components/main-container';
 
@@ -36,10 +37,10 @@ const App = props => {
     allLabelsJson.nodes.map(label => [parseInt(label.id), label])
   );
   return (
-    <>
+    <LabelProvider value={labels}>
       <Meta meta={siteMetadata} />
       <MainContainer branches={branches} labels={labels} setLang={setLang} />
-    </>
+    </LabelProvider>
   );
 };
 export default App;

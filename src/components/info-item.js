@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import LabelContext from '../hooks/label-context';
 import InfoBox from './info-box';
 import InfoLabel from './info-label';
 import InfoIcon from './info-icon';
@@ -20,15 +22,11 @@ import InfoIcon from './info-icon';
 */
 
 const InfoItem = props => {
-  const {
-    source,
-    source: { id: stringId },
-    icon,
-    label
-  } = props;
-  const id = parseInt(stringId);
+  const labels = useContext(LabelContext);
+  const { icon, label, border, id } = props;
+  const source = !border ? labels.get(id) : null;
+
   switch (true) {
-    // case true:
     //   return null
     case id === 5 && label:
       // Центр Города
@@ -48,14 +46,26 @@ const InfoItem = props => {
       // Васильевский остров
       return (
         <InfoBox style={{ height: '13em' }} right bottom align="left">
-          <InfoLabel label={source} style={{ left: ['0%', '100%'], transform: ['translateX(0)', 'translateX(-100%)'] }}/>
+          <InfoLabel
+            label={source}
+            style={{
+              left: ['0%', '100%'],
+              transform: ['translateX(0)', 'translateX(-100%)']
+            }}
+          />
         </InfoBox>
       );
     case id === 6 && icon:
       // Васильевский остров
       return (
         <InfoBox right bottom align="left">
-          <InfoIcon label={source} style={{ left: ['0%', '100%'], transform: ['translateX(0)', 'translateX(-100%)']}}/>
+          <InfoIcon
+            label={source}
+            style={{
+              left: ['0%', '100%'],
+              transform: ['translateX(0)', 'translateX(-100%)']
+            }}
+          />
         </InfoBox>
       );
     case id === 7 && label:
@@ -79,14 +89,14 @@ const InfoItem = props => {
           <InfoIcon label={source} />
           <InfoLabel label={source} />
         </InfoBox>
-      )
+      );
     case id === 10:
       // Обухово
       return (
         <InfoBox style={{ height: '3em' }} left bottom align="right">
           <InfoLabel label={source} />
         </InfoBox>
-      )
+      );
     case id === 11 && label:
       // Гутуевский остров
       return (

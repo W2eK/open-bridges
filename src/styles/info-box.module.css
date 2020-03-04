@@ -1,7 +1,7 @@
 .info-box {
   width: var(--layout-margin);
   position: absolute;
-  padding: 0 1em;
+  padding: 0 var(--layout-padding);
   display: flex;
   justify-content: center;
   align-items: stretch;

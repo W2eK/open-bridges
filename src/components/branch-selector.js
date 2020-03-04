@@ -1,11 +1,14 @@
 import React, { useContext } from 'react';
 
 import ModeContext from '../hooks/mode-context';
+import LabelContext from '../hooks/label-context';
 import classNames from '../styles/branch-selector.module.css';
 
 const BranchSelector = props => {
-  const { rivers, setMode } = props;
+  const { rivers: riverIds, setMode } = props;
   const mode = useContext(ModeContext);
+  const labels = useContext(LabelContext);
+  const rivers = riverIds.map(id => labels.get(id));
   const rederInputs = ({ name }, i) => (
     <li key={name}>
       <input

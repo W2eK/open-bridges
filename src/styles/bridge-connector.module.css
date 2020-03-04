@@ -1,5 +1,5 @@
 .bridge-connector {
-  height: 4em;
+  height: var(--layout-gap);
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -7,7 +7,7 @@
 }
 
 .bridge-connector div {
-  border-left: 1px dashed var(--color-inactive);
+  /* border-left: 1px dashed var(--color-inactive); */
   height: 50%;
   transition-property: height;
 }

@@ -8,7 +8,7 @@ import InfoItem from './info-item';
 import classNames from '../styles/branch-switcher.module.css';
 
 const BranchSwitcher = props => {
-  const { branches, rivers, setMode, time, labels } = props;
+  const { branches, rivers, setMode, time } = props;
   const mode = useContext(ModeContext);
   const constant = branches.get(0);
   const switchable = [branches.get(1), branches.get(2)];
@@ -34,7 +34,7 @@ const BranchSwitcher = props => {
           style={constantStyle}
         >
           <BridgeList time={time} bridges={constant}>
-            <InfoItem source={labels.get(11)} label/>
+            <InfoItem id={11} label/>
           </BridgeList>
         </div>
         <div
@@ -44,9 +44,9 @@ const BranchSwitcher = props => {
           {switchable.map((branch, i) => (
             <BridgeList key={i} time={time} bridges={branch} />
           ))}
-          <InfoItem source={labels.get(5)} icon/>
-          <InfoItem source={labels.get(6)} label/>
-          <InfoItem source={labels.get(6)} icon/>
+          <InfoItem id={5} icon/>
+          <InfoItem id={6} label/>
+          <InfoItem id={6} icon/>
         </div>
       </div>
     </div>
