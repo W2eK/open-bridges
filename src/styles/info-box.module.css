@@ -1,0 +1,27 @@
+.info-box {
+  width: var(--layout-margin);
+  position: absolute;
+  padding: 0 1em;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.info-box__right {
+  transform: translateX(-100%)
+}
+.info-box__right > div {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.info-box__left {
+  transform: translateX(100%);
+}
+
+.info-box__right > div {
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+

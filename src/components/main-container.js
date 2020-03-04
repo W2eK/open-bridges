@@ -5,6 +5,7 @@ import { ModeProvider } from '../hooks/mode-context';
 import AppLogo from './app-bar';
 import BranchSwitcher from './branch-switcher';
 import BridgeList from './bridge-list';
+import InfoItem from './info-item';
 import MainTime from './main-time';
 import BridgeConnector from './bridge-connector';
 
@@ -19,7 +20,8 @@ const MainContainer = props => {
         style={{
           height: '100%',
           paddingBottom: 'var(--layout-margin)',
-          position: 'relative'
+          position: 'relative',
+          overflow: 'hidden'
         }}
       >
         <AppLogo setLang={setLang} />
@@ -30,11 +32,19 @@ const MainContainer = props => {
           setMode={setMode}
           time={time}
         />
-        <div className="wrapper">
+        <div className="wrapper" style={{ position: 'relative' }}>
           <BridgeConnector condition={i => i !== mode} />
-          <BridgeList time={time} bridges={branches.get(3)} />
+          <BridgeList time={time} bridges={branches.get(3)}>
+            <InfoItem source={labels.get(5)} label />
+            <InfoItem source={labels.get(7)} label />
+          </BridgeList>
           <BridgeConnector condition={i => i} />
-          <BridgeList time={time} bridges={branches.get(4)} />
+          <BridgeList time={time} bridges={branches.get(4)}>
+            <InfoItem source={labels.get(8)} label />
+            <InfoItem source={labels.get(8)} icon />
+            <InfoItem source={labels.get(9)} />
+            <InfoItem source={labels.get(10)} label />
+          </BridgeList>
         </div>
         <MainTime time={time} />
       </div>

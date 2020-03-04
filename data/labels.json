@@ -61,5 +61,33 @@
       "en": "Peski",
       "ru": "Пески"
     }
+  },
+  {
+    "id": 10,
+    "name": {
+      "en": "Obukhovo",
+      "ru": "Обухово"
+    }
+  },
+  {
+    "id": 11,
+    "name": {
+      "en": "Gutuevsky island",
+      "ru": "Гутуевский остров"
+    }
+  },
+  {
+    "id": 12,
+    "name": {
+      "en": "Primorskaya",
+      "ru": "Приморская"
+    }
+  },
+  {
+    "id": 13,
+    "name": {
+      "en": "Staraya Derevnya",
+      "ru": "Старая Деревня"
+    }
   }
 ]

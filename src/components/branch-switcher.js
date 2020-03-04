@@ -1,11 +1,11 @@
-import React, { useContext }  from 'react';
+import React, { useContext } from 'react';
 
 import ModeContext from '../hooks/mode-context';
 
 import BranchSelector from './branch-selector';
 import BridgeList from './bridge-list';
+import InfoItem from './info-item';
 import classNames from '../styles/branch-switcher.module.css';
-
 
 const BranchSwitcher = props => {
   const { branches, rivers, setMode, time, labels } = props;
@@ -15,13 +15,16 @@ const BranchSwitcher = props => {
   const maxSize = Math.max(...switchable.map(({ length }) => length));
   const currentSize = switchable[mode].length;
   const switchStyle = {
-    transform: `translateX(calc(${mode * -100}% - ${10 *
-      mode}vw))`,
+    transform: `translateX(calc(${mode * -100}% - ${10 * mode}vw))`,
     marginTop: `${(currentSize - maxSize) * (3 + 2)}em`
   };
   const constantStyle = {
     marginTop: `${(maxSize - currentSize) * (3 + 2)}em`
   };
+  const infoboxStyle = {
+    left: ['0%', '100%'],
+    transform: ['translateX(0)', 'translateX(-100%)']
+  }
   return (
     <div>
       <BranchSelector {...{ rivers, setMode }} />
@@ -30,7 +33,9 @@ const BranchSwitcher = props => {
           className={classNames.branchSwitcher__constant + ' transitionable'}
           style={constantStyle}
         >
-          <BridgeList time={time} bridges={constant} />
+          <BridgeList time={time} bridges={constant}>
+            <InfoItem source={labels.get(11)} label/>
+          </BridgeList>
         </div>
         <div
           className={classNames.branchSwitcher + ' transitionable'}
@@ -39,6 +44,9 @@ const BranchSwitcher = props => {
           {switchable.map((branch, i) => (
             <BridgeList key={i} time={time} bridges={branch} />
           ))}
+          <InfoItem source={labels.get(5)} icon/>
+          <InfoItem source={labels.get(6)} label/>
+          <InfoItem source={labels.get(6)} icon/>
         </div>
       </div>
     </div>

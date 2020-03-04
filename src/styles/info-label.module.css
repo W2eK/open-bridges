@@ -1,0 +1,13 @@
+.info-label {
+  color: var(--color-inactive);
+  font-style: italic;
+  font-size: .75em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.info-label span {
+  position: relative;
+  /* width: min-content; */
+}

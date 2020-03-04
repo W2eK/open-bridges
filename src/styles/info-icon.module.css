@@ -1,0 +1,9 @@
+.info-icon {
+  display: flex;
+}
+.info-icon img {
+  display: block;
+  width: 48px;
+  height: auto;
+  position: relative;
+}

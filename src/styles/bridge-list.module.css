@@ -3,6 +3,7 @@
   border: 1px dashed var(--color-inactive);
   border-top: none;
   border-bottom: none;
+  position: relative;
 }
 
 
