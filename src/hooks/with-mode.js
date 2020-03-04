@@ -9,7 +9,7 @@ const toKebabCase = string =>
 
 const withMode = Wrapped => props => {
   const { mode, setMode } = useContext(ModeContext);
-  const { style, top, right, bottom, left, align = 'left' } = props;
+  const { style, top, right, bottom, left, align = '' } = props;
   const computedStyle = Object.entries({ top, right, bottom, left }).reduce(
     (style, [key, value]) => {
       if (value) style[key] = 0;

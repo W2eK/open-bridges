@@ -30,29 +30,38 @@ const InfoItem = props => {
   const source = !border ? labels.get(id) : null;
 
   switch (true) {
-    //   return null
     case id === 5 && label:
       // Центр Города
       return (
-        <InfoBox style={{ height: ['27em', '3em'] }} left bottom align="right">
+        <InfoBox left align="right" style={{
+          bottom: [calc(1, 0, 1),0],
+          height: '3em'
+        }}>
           <InfoLabel label={source} />
         </InfoBox>
       );
     case id === 5 && icon:
       // Центр Города
       return (
-        <InfoBox left bottom align="right">
+        <InfoBox align="right" style={{bottom: calc(2, 0, 1), left: [0, '-5em'], opacity: [1, 0]}}>
           <InfoIcon label={source} />
         </InfoBox>
       );
     case id === 6 && label:
       // Васильевский остров
       return (
-        <InfoBox style={{ height: '13em' }} right bottom align="left">
+        <InfoBox
+          style={{
+            bottom: calc(2, 1, 1),
+            height: '3em',
+            left: ['100%', 0],
+            transform: ['translateX(0)', 'translateX(-100%)']
+          }}
+        >
           <InfoLabel
             label={source}
             style={{
-              left: ['0%', '100%'],
+              left: [0, '100%'],
               transform: ['translateX(0)', 'translateX(-100%)']
             }}
           />
@@ -61,11 +70,18 @@ const InfoItem = props => {
     case id === 6 && icon:
       // Васильевский остров
       return (
-        <InfoBox right bottom align="left">
+        <InfoBox
+          style={{
+            left: 0,
+            bottom: calc(1, 0, 1),
+            left: ['100%', 0],
+            transform: ['translateX(0)', 'translateX(-100%)']
+          }}
+        >
           <InfoIcon
             label={source}
             style={{
-              left: ['0%', '100%'],
+              left: [0, '100%'],
               transform: ['translateX(0)', 'translateX(-100%)']
             }}
           />
@@ -74,7 +90,7 @@ const InfoItem = props => {
     case id === 7 && label:
       // Петроградская сторона
       return (
-        <InfoBox style={{ height: ['3em', '27em'] }} right bottom align="left">
+        <InfoBox style={{ height: '3em', bottom: [0, calc(2, 1, 1)] }} right align="left">
           <InfoLabel label={source} />
         </InfoBox>
       );
@@ -125,11 +141,9 @@ const InfoItem = props => {
     case id === 'top-left' && border:
       return <InfoBorder top left style={{height: calc(1)}}/>
     case id === 'vo-left' && border:
-      // return <InfoBorder bottom right style={{height: [calc(2, 2), 0]}}/>
-      return <InfoBorder bottom right style={{height: calc(2, 2), opacity: [1, 0]}}/>
+      return <InfoBorder style={{bottom: calc(1, 0, 1), right: [0, 'calc(100% + var(--layout-margin))'], height: calc(2, 2), opacity: [1, 0]}}/>
     case id === 'vo-right' && border:
-      // return <InfoBorder bottom right style={{height: [0, calc(3, 3)], right: 'calc(var(--layout-margin) * -1 - 1px)'}}/>
-      return <InfoBorder bottom right style={{height: calc(3, 3), right: 'calc(var(--layout-margin) * -1 - 1px)', opacity: [0, 1]}}/>
+      return <InfoBorder style={{bottom: calc(1, 0, 1), left: ['calc(100% + var(--layout-margin))', 0], height: calc(3, 3), opacity: [0, 1]}}/>
     default:
       return null;
   }

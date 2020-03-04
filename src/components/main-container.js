@@ -33,6 +33,11 @@ const MainContainer = props => {
         <div className="wrapper" style={{ position: 'relative'}}>
           <BridgeConnector condition={i => i !== mode} />
           <BridgeList time={time} bridges={branches.get(3)}>
+            <InfoItem id={5} icon />
+            <InfoItem id={6} label />
+            <InfoItem id={6} icon />
+            <InfoItem id="vo-right" border />
+            <InfoItem id="vo-left" border />
             <InfoItem id={5} label />
             <InfoItem id={7} label />
             <InfoItem id="center-right" border />
@@ -52,5 +57,4 @@ const MainContainer = props => {
     </ModeProvider>
   );
 };
-
 export default MainContainer;

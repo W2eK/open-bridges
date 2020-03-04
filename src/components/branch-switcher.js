@@ -24,7 +24,7 @@ const BranchSwitcher = props => {
   return (
     <div>
       <BranchSelector rivers={rivers} />
-      <div className={'wrapper'}>
+      <div className="wrapper">
         <div
           className={classNames.branchSwitcher__constant + ' transitionable'}
           style={constantStyle}
@@ -43,19 +43,6 @@ const BranchSwitcher = props => {
             ))}
           </div>
         </div>
-        {/* <div
-          className={classNames.branchSwitcher + ' transitionable'}
-          style={switchStyle}
-        >
-          {switchable.map((branch, i) => (
-            <BridgeList key={i} time={time} bridges={branch} />
-          ))} */}
-        {/* <InfoItem id={5} icon /> */}
-        {/* <InfoItem id={6} label /> */}
-        {/* <InfoItem id={6} icon /> */}
-        {/* <InfoItem id="vo-right" border /> */}
-        {/* <InfoItem id="vo-left" border /> */}
-        {/* </div> */}
       </div>
     </div>
   );
