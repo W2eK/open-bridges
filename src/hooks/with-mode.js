@@ -8,7 +8,7 @@ const toKebabCase = string =>
 // const calcProperty = (a, b = 0, c = 0) => `calc(3em * ${a} + 2em * ${b} + 4em * ${c})`;
 
 const withMode = Wrapped => props => {
-  const mode = useContext(ModeContext);
+  const { mode, setMode } = useContext(ModeContext);
   const { style, top, right, bottom, left, align = 'left' } = props;
   const computedStyle = Object.entries({ top, right, bottom, left }).reduce(
     (style, [key, value]) => {
@@ -28,7 +28,7 @@ const withMode = Wrapped => props => {
     }
   }
   computedStyle.transitionProperty = transitionProperty.join(', ');
-  return <Wrapped {...props} style={computedStyle} align={align} transitionable={transitionProperty.length ? 'transitionable' : ''}/>;
+  return <Wrapped onClick={setMode} {...props} style={computedStyle} align={align} transitionable={transitionProperty.length ? 'transitionable' : ''}/>;
 };
 
 export default withMode;

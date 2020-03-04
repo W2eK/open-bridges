@@ -6,9 +6,9 @@ import classNames from '../styles/info-label.module.css';
 
 
 const InfoLabel = props => {
-  const { label: { name }, style, transitionable } = props;
+  const { label: { name }, style, transitionable, onClick } = props;
   const labels = name.split(' ').map((string, i) => (
-    <span key={i} className={transitionable} style={style}>{string}<br/></span>
+    <span onClick={onClick} key={i} className={transitionable} style={style}>{string}<br/></span>
   ))
   return (
     <div className={classNames.infoLabel}>

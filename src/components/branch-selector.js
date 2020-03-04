@@ -5,8 +5,8 @@ import LabelContext from '../hooks/label-context';
 import classNames from '../styles/branch-selector.module.css';
 
 const BranchSelector = props => {
-  const { rivers: riverIds, setMode } = props;
-  const mode = useContext(ModeContext);
+  const { rivers: riverIds } = props;
+  const { mode, setMode } = useContext(ModeContext);
   const labels = useContext(LabelContext);
   const rivers = riverIds.map(id => labels.get(id));
   const rederInputs = ({ name }, i) => (
@@ -17,7 +17,7 @@ const BranchSelector = props => {
         type="radio"
         name="branch-selector"
         role="tab"
-        onChange={() => setMode(i)}
+        onChange={setMode}
         checked={i === mode}
       />
       <label htmlFor={name} className={'transitionable'}>

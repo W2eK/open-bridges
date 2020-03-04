@@ -15,7 +15,7 @@ const MainContainer = props => {
   const [time, setTime] = useState('3:00');
   // window.addGlobalVariables({ mode, setMode, time, setTime });
   return (
-    <ModeProvider value={mode}>
+    <ModeProvider value={{mode, setMode: () => setMode(i => i ? 0 : 1)}}>
       <div
         style={{
           height: '100%',
@@ -28,7 +28,6 @@ const MainContainer = props => {
           rivers={[1, 2]}
           branches={branches}
           labels={labels}
-          setMode={setMode}
           time={time}
         />
         <div className="wrapper" style={{ position: 'relative'}}>

@@ -8,8 +8,8 @@ import InfoItem from './info-item';
 import classNames from '../styles/branch-switcher.module.css';
 
 const BranchSwitcher = props => {
-  const { branches, rivers, setMode, time } = props;
-  const mode = useContext(ModeContext);
+  const { branches, rivers, time } = props;
+  const { mode } = useContext(ModeContext);
   const constant = branches.get(0);
   const switchable = [branches.get(1), branches.get(2)];
   const maxSize = Math.max(...switchable.map(({ length }) => length));
@@ -27,7 +27,7 @@ const BranchSwitcher = props => {
   }
   return (
     <div>
-      <BranchSelector {...{ rivers, setMode }} />
+      <BranchSelector rivers={rivers} />
       <div className={classNames.branchSwitcher__wrapper + ' wrapper'}>
         <div
           className={classNames.branchSwitcher__constant + ' transitionable'}
