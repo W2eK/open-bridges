@@ -14,21 +14,17 @@ const BranchSwitcher = props => {
   const switchable = [branches.get(1), branches.get(2)];
   const maxSize = Math.max(...switchable.map(({ length }) => length));
   const currentSize = switchable[mode].length;
-  const switchStyle = {
-    transform: `translateX(calc(${mode * -100}% - ${10 * mode}vw))`,
-    marginTop: `${(currentSize - maxSize) * (3 + 2)}em`
-  };
+  // translateX(calc(${mode * -100}% - ${10 * mode}vw))
+  // `${(currentSize - maxSize) * (3 + 2)}em`
+  const marginLeft = `calc(${-100 * mode}% - ${10 * mode}vw)`;
+  const marginTop = `${(currentSize - maxSize) * (3 + 2)}em`;
   const constantStyle = {
-    marginTop: `${(maxSize - currentSize) * (3 + 2)}em`
+    marginTop: `${(maxSize - currentSize) * (3 + 2) + 2}em`
   };
-  const infoboxStyle = {
-    left: ['0%', '100%'],
-    transform: ['translateX(0)', 'translateX(-100%)']
-  }
   return (
     <div>
       <BranchSelector rivers={rivers} />
-      <div className={classNames.branchSwitcher__wrapper + ' wrapper'}>
+      <div className={'wrapper'}>
         <div
           className={classNames.branchSwitcher__constant + ' transitionable'}
           style={constantStyle}
@@ -36,28 +32,30 @@ const BranchSwitcher = props => {
           <BridgeList time={time} bridges={constant}>
             <InfoItem id="top-right" border />
             <InfoItem id="top-left" border />
-            <InfoItem id={13} label/>
-            <InfoItem id={11} label/>
+            <InfoItem id={13} label />
+            <InfoItem id={11} label />
           </BridgeList>
         </div>
-        <div
+        <div className={classNames.branchSwitcher__wrapper + ' transitionable'} style={{marginTop}}>
+          <div className={classNames.branchSwitcher + ' transitionable'} style={{marginLeft}}>
+            {switchable.map((branch, i) => (
+              <BridgeList key={i} time={time} bridges={branch} />
+            ))}
+          </div>
+        </div>
+        {/* <div
           className={classNames.branchSwitcher + ' transitionable'}
           style={switchStyle}
         >
-          {switchable.map((branch, i) => {
-            const child = i ? <InfoItem id={13} label/> : <InfoItem id={11} label/>
-            return (
-              <BridgeList key={i} time={time} bridges={branch}>
-                {null}
-              </BridgeList>
-            )
-          })}
-          <InfoItem id={5} icon/>
-          <InfoItem id={6} label/>
-          <InfoItem id={6} icon/>
-          <InfoItem id="vo-right" border />
-          <InfoItem id="vo-left" border />
-        </div>
+          {switchable.map((branch, i) => (
+            <BridgeList key={i} time={time} bridges={branch} />
+          ))} */}
+        {/* <InfoItem id={5} icon /> */}
+        {/* <InfoItem id={6} label /> */}
+        {/* <InfoItem id={6} icon /> */}
+        {/* <InfoItem id="vo-right" border /> */}
+        {/* <InfoItem id="vo-left" border /> */}
+        {/* </div> */}
       </div>
     </div>
   );

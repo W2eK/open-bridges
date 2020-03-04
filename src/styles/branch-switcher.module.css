@@ -1,12 +1,15 @@
 .branch-switcher__wrapper {
-  margin-top: 2em;
+  /* margin-top: 2em; */
   overflow: hidden;
   position: relative;
+  transition-property: margin-left, margin-top;
 }
 .branch-switcher {
+  width: 100%;
+  /* position: fixed; */
   display: flex;
   align-items: flex-end;
-  transition-property: transform, margin-top;
+  transition-property: margin-left, margin-top;
 }
 
 .branch-switcher > ul {
