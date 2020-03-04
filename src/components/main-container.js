@@ -20,8 +20,7 @@ const MainContainer = props => {
         style={{
           height: '100%',
           paddingBottom: 'var(--layout-margin)',
-          position: 'relative',
-          overflow: 'hidden'
+          position: 'relative'
         }}
       >
         <AppLogo setLang={setLang} />
@@ -32,7 +31,7 @@ const MainContainer = props => {
           setMode={setMode}
           time={time}
         />
-        <div className="wrapper" style={{ position: 'relative' }}>
+        <div className="wrapper" style={{ position: 'relative', overflow: 'hidden' }}>
           <BridgeConnector condition={i => i !== mode} />
           <BridgeList time={time} bridges={branches.get(3)}>
             <InfoItem source={labels.get(5)} label />
