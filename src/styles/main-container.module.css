@@ -1,0 +1,9 @@
+.main-container {
+  height: 100%;
+  padding-bottom: var(--layout-gap);
+  position: relative;
+}
+
+.main-container__gap {
+  margin-top: var(--layout-gap);
+}
