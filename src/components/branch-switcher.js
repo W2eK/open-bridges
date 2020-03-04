@@ -55,6 +55,8 @@ const BranchSwitcher = props => {
           <InfoItem id={5} icon/>
           <InfoItem id={6} label/>
           <InfoItem id={6} icon/>
+          <InfoItem id="vo-right" border />
+          <InfoItem id="vo-left" border />
         </div>
       </div>
     </div>

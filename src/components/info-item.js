@@ -121,9 +121,15 @@ const InfoItem = props => {
     case id === 'center-right' && border:
       return <InfoBorder bottom right style={{height: [calc(1), calc(4, 2, 1)]}}/>
     case id === 'top-right' && border:
-      return <InfoBorder top right style={{height: [calc(3, 2), calc(1)]}}/>
+      return <InfoBorder top right style={{height: calc(1)}}/>
     case id === 'top-left' && border:
-      return <InfoBorder top left style={{height: [calc(1), calc(4, 3)]}}/>
+      return <InfoBorder top left style={{height: calc(1)}}/>
+    case id === 'vo-left' && border:
+      // return <InfoBorder bottom right style={{height: [calc(2, 2), 0]}}/>
+      return <InfoBorder bottom right style={{height: calc(2, 2), opacity: [1, 0]}}/>
+    case id === 'vo-right' && border:
+      // return <InfoBorder bottom right style={{height: [0, calc(3, 3)], right: 'calc(var(--layout-margin) * -1 - 1px)'}}/>
+      return <InfoBorder bottom right style={{height: calc(3, 3), right: 'calc(var(--layout-margin) * -1 - 1px)', opacity: [0, 1]}}/>
     default:
       return null;
   }
