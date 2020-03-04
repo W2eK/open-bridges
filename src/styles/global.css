@@ -15,6 +15,7 @@
   --color-inactive: #b3b3b3;
   --color-positive: #37efba;
   --color-negative: #ff7272;
+  overflow-x: hidden;
 }
 
 .wrapper {

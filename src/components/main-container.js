@@ -8,12 +8,11 @@ import BridgeList from './bridge-list';
 import InfoItem from './info-item';
 import MainTime from './main-time';
 import BridgeConnector from './bridge-connector';
-
 const MainContainer = props => {
   const { branches, labels, setLang } = props;
   const [mode, setMode] = useState(0);
   const [time, setTime] = useState('3:00');
-  window.addGlobalVariables({ mode, setMode, time, setTime });
+  // window.addGlobalVariables({ mode, setMode, time, setTime });
   return (
     <ModeProvider value={mode}>
       <div
@@ -31,7 +30,7 @@ const MainContainer = props => {
           setMode={setMode}
           time={time}
         />
-        <div className="wrapper" style={{ position: 'relative', overflow: 'hidden' }}>
+        <div className="wrapper" style={{ position: 'relative'}}>
           <BridgeConnector condition={i => i !== mode} />
           <BridgeList time={time} bridges={branches.get(3)}>
             <InfoItem source={labels.get(5)} label />
