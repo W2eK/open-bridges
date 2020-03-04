@@ -39,7 +39,7 @@ const BranchSwitcher = props => {
         <div className={classNames.branchSwitcher__wrapper + ' transitionable'} style={{marginTop}}>
           <div className={classNames.branchSwitcher + ' transitionable'} style={{marginLeft}}>
             {switchable.map((branch, i) => (
-              <BridgeList key={i} time={time} bridges={branch} />
+              <BridgeList key={i} time={time} bridges={branch} invisible={i !== mode}/>
             ))}
           </div>
         </div>

@@ -5,6 +5,7 @@
   border-top: none;
   border-bottom: none;
   */
+  transition-property: opacity;
   position: relative;
 }
 
