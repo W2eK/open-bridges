@@ -1,6 +1,6 @@
 {
-  "name": "bridges",
-  "version": "1.0.0",
+  "name": "open-bridges",
+  "version": "0.1.0",
   "author": "Vladimir Osokin <osokin.home@gmail.com>",
   "license": "MIT",
   "scripts": {
