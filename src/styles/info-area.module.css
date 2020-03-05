@@ -1,16 +1,27 @@
 .info-area {
-  /* background-color: var(--color-ground); */
-  /* background-color: white; */
-  border: 1px solid #ddd;
-  height: 100%;
   width: var(--layout-margin);
   position: absolute;
-  border-radius: 4px;
-  /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
+  border-radius: 8px;
   z-index: -2;
-  /* transition-delay: 0s, calc(var(--transition-time) * .5); */
-  /* transition-duration: var(--transition-time), calc(var(--transition-time) * .5); */
+  padding: 1px;
+  /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
 }
+
+.info-area__left {
+  background: linear-gradient(to right, #ddd 50%, white);
+}
+
+.info-area__right {
+  background: linear-gradient(to left, #ddd 50%, white);
+}
+
+.info-area div {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  border-radius: 7px;
+}
+
 
 .info-area__height {
   height: 100vh;

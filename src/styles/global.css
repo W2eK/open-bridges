@@ -15,7 +15,7 @@
   --item-gap: 4em;
   */
   --layout-nav: 4em;
-  --layout-margin: 8em;
+  --layout-margin: 6em;
   --transition-time: .3s;
   --color-background: #ffffff;
   --color-active: #222222;
@@ -23,7 +23,6 @@
   --color-land: #f6f6f6;
   --color-positive: #37efba;
   --color-negative: #ff7272;
-  --color-ground: #f8f8f8;
   overflow-x: hidden;
 }
 

@@ -139,21 +139,18 @@ const InfoItem = props => {
       return <InfoArea style={style} left align="right"/>
     case id === 'top-right' && area:
       var style = {
-        height: '1',
         opacity: [0, 1],
-        top: ['-1,-1', 0],
+        bottom: ['1,1',0],
         right: ['-8em', 0]
       }
-      return <InfoArea style={style} right align="left"/>
+      return <InfoArea style={style} right height align="left"/>
     case id === 'vo-right' && area:
       var style = {
         height: ['3,2', '4,3'],
         bottom: '1,0,1',
         right: [0, 'calc(100% + var(--layout-margin))'],
-        // transitionDelay: ['0s, 0s', '.2s, 0s'],
-        // width: ['50vw', 'var(--layout-margin)'],
-        width: 'var(--layout-margin)',
-        // opacity: [1, 0]
+        background: ['linear-gradient(to right, #ddd 50%, white)', 'linear-gradient(to right, white, #ddd 50%)'],
+        width: 'var(--layout-margin)'
       };
       return <InfoArea style={style} align="left"/>
     case id === 'center-right' && area:
