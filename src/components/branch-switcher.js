@@ -16,8 +16,8 @@ const BranchSwitcher = props => {
       <BridgeList bridges={constant}>
         <InfoItem id="top-right" area />
         <InfoItem id="top-left" area />
-        {/* <InfoItem id={13} label /> */}
-        {/* <InfoItem id={11} label /> */}
+        <InfoItem id={13} label />
+        <InfoItem id={11} label />
       </BridgeList>
       <div className={classNames.branchSwitcher__wrapper}>
         <div className={classNames.branchSwitcher__carousel + ' transitionable'}>

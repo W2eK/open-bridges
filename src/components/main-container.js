@@ -26,22 +26,21 @@ const MainContainer = props => {
             <BranchSwitcher branches={branches} />
             <div className={classNames.mainContainer__gap} />
             <BridgeList bridges={branches.get(3)}>
-              <InfoItem id="vo-right" area />
-              <InfoItem id="vo-left" area />
+              <InfoItem id="vasilyevskiy" area />
               <InfoItem id="center-right" area />
-              {/* <InfoItem id={5} icon /> */}
-              {/* <InfoItem id={6} label /> */}
-              {/* <InfoItem id={6} icon /> */}
-              {/* <InfoItem id={5} label /> */}
-              {/* <InfoItem id={7} label /> */}
+              <InfoItem id={5} icon />
+              <InfoItem id={6} label />
+              <InfoItem id={6} icon />
+              <InfoItem id={5} label />
+              <InfoItem id={7} label />
             </BridgeList>
             <div className={classNames.mainContainer__gap} />
             <BridgeList bridges={branches.get(4)}>
               <InfoItem id="bottom-right" area />
               <InfoItem id={8} label />
-              {/* <InfoItem id={8} icon /> */}
-              {/* <InfoItem id={9} /> */}
-              {/* <InfoItem id={10} label /> */}
+              <InfoItem id={8} icon />
+              <InfoItem id={9} />
+              <InfoItem id={10} label />
             </BridgeList>
             {/* <MainTime /> */}
           </main>

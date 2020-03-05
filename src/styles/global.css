@@ -15,7 +15,7 @@
   --item-gap: 4em;
   */
   --layout-nav: 4em;
-  --layout-margin: 6em;
+  --layout-margin: 8em;
   --transition-time: .3s;
   --color-background: #ffffff;
   --color-active: #222222;
@@ -27,7 +27,7 @@
 }
 
 .constraint {
-  padding: 0 10vw;
+  padding: 0 14vw;
 }
 .constraint > * {
   max-width: 30em;
@@ -62,6 +62,11 @@ button {
 .transitionable {
   transition-duration: var(--transition-time);
   transition-timing-function: ease-out;
+}
+
+.clickable {
+  pointer-events: all !important;
+  cursor: pointer !important;
 }
 
 .material-icons {

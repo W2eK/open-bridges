@@ -8,7 +8,7 @@ const InfoBox = props => {
   const className = [
     classNames.infoBox,
     classNames['infoBox__' + align],
-    transitionable
+    transitionable ? 'transitionable' : ''
   ].join(' ')
   return (
     <div className={className} style={style}>
