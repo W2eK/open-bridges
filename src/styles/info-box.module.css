@@ -2,20 +2,12 @@
   height: 3em;
   width: var(--layout-margin);
   position: absolute;
-  padding: 0 .75em;
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-direction: column;
+  padding: .75em;
   pointer-events: none;
 }
 
 .info-box__right {
   transform: translateX(-100%)
-}
-.info-box__right > div {
-  align-items: flex-start;
-  justify-content: flex-start;
 }
 
 .info-box__left {
@@ -24,6 +16,6 @@
 
 .info-box__right > div {
   align-items: flex-end;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
 }
 

@@ -1,9 +1,11 @@
 .info-label {
   color: var(--color-inactive);
+  height: 100%;
   font-style: italic;
   font-size: .75em;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
 }
 

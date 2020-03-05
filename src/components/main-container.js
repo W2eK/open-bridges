@@ -13,7 +13,7 @@ import MainTime from './main-time';
 import classNames from '../styles/main-container.module.css';
 
 const MainContainer = props => {
-  const { branches, labels, setLang } = props;
+  const { branches, setLang } = props;
   const [mode, setMode] = useState(0);
   const [time, setTime] = useState('3:00');
   window.addGlobalVariables({ mode, setMode, time, setTime });
@@ -26,23 +26,28 @@ const MainContainer = props => {
             <BranchSwitcher branches={branches} />
             <div className={classNames.mainContainer__gap} />
             <BridgeList bridges={branches.get(3)}>
+              <InfoItem id="top-right" area />
+              <InfoItem id="top-left" area />
               <InfoItem id="vasilyevskiy" area />
               <InfoItem id="center-right" area />
               <InfoItem id={5} icon />
-              <InfoItem id={6} label />
               <InfoItem id={6} icon />
+              <InfoItem id={7} icon />
+              {/* <InfoItem id={8} icon /> */}
+              <InfoItem id={6} label />
               <InfoItem id={5} label />
               <InfoItem id={7} label />
+              <InfoItem id={13} label />
+              <InfoItem id={11} label />
             </BridgeList>
             <div className={classNames.mainContainer__gap} />
             <BridgeList bridges={branches.get(4)}>
               <InfoItem id="bottom-right" area />
               <InfoItem id={8} label />
-              <InfoItem id={8} icon />
               <InfoItem id={9} />
               <InfoItem id={10} label />
             </BridgeList>
-            {/* <MainTime /> */}
+            <MainTime />
           </main>
           {/* <AppLogo setLang={setLang} /> */}
         </div>
