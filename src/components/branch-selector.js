@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 
 import ModeContext from '../hooks/mode-context';
 import LabelContext from '../hooks/label-context';
+import MainFixed from './main-fixed.js';
 import classNames from '../styles/branch-selector.module.css';
 
 const BranchSelector = props => {
@@ -28,18 +29,22 @@ const BranchSelector = props => {
   const inputs = rivers.map(rederInputs);
   const spanWidth = 100 / rivers.length;
   return (
-    <div className={classNames.branchSelector__wrapper + ' wrapper'}>
-      <ul className={classNames.branchSelector}>
-        {inputs}
-        <span
-          className={classNames.branchSelector__outline + ' transitionable'}
-          style={{
-            width: `${spanWidth}%`,
-            left: `${mode * spanWidth}%`
-          }}
-        />
-      </ul>
-    </div>
+    <MainFixed height="var(--layout-nav)">
+      <nav className={classNames.branchSelector}>
+        <div className="constraint">
+          <ul>
+            {inputs}
+            <span
+              className={classNames.branchSelector__outline + ' transitionable'}
+              style={{
+                width: `${spanWidth}%`,
+                left: `${mode * spanWidth}%`
+              }}
+            />
+          </ul>
+        </div>
+      </nav>
+    </MainFixed>
   );
 };
 

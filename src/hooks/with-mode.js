@@ -27,8 +27,10 @@ const withMode = Wrapped => props => {
       computedStyle[key] = value;
     }
   }
+  if(align === 'right') computedStyle.transform = 'translateX(-100%)'
+  if(align === 'left') computedStyle.transform = 'translateX(100%)';
   computedStyle.transitionProperty = transitionProperty.join(', ');
-  return <Wrapped onClick={setMode} {...props} style={computedStyle} align={align} transitionable={transitionProperty.length ? 'transitionable' : ''}/>;
+  return <Wrapped onClick={setMode} {...props} style={computedStyle} transitionable={transitionProperty.length ? 'transitionable' : ''}/>;
 };
 
 export default withMode;

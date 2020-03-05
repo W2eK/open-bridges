@@ -1,13 +1,12 @@
-.branch-selector__wrapper {
-  background-color: var(--color-background);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
 .branch-selector {
+  top: 0;
+  z-index: 2;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  background-color: white;
+}
+.branch-selector ul {
   display: flex;
-  height: 3em;
+  height: var(--layout-nav);
   color: var(--color-inactive);
 }
 .branch-selector li {
