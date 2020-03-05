@@ -8,21 +8,22 @@
   font-size: 16px;
   /* --layout-margin: 10vw; */
   --layout-padding: 1em;
-  --layout-gap: 4em;
+  --layout-gap: 5em;
   /*
   --item-height: 3em;
   --item-margin: 2em;
   --item-gap: 4em;
   */
   --layout-nav: 4em;
-  --layout-margin: 4em;
-  --transition-time: .5s;
+  --layout-margin: 8em;
+  --transition-time: .3s;
   --color-background: #ffffff;
   --color-active: #222222;
   --color-inactive: #b3b3b3;
   --color-land: #f6f6f6;
   --color-positive: #37efba;
   --color-negative: #ff7272;
+  --color-ground: #f8f8f8;
   overflow-x: hidden;
 }
 

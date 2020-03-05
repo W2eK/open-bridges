@@ -1,0 +1,17 @@
+.info-area {
+  /* background-color: var(--color-ground); */
+  /* background-color: white; */
+  border: 1px solid #ddd;
+  height: 100%;
+  width: var(--layout-margin);
+  position: absolute;
+  border-radius: 4px;
+  /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
+  z-index: -2;
+  /* transition-delay: 0s, calc(var(--transition-time) * .5); */
+  /* transition-duration: var(--transition-time), calc(var(--transition-time) * .5); */
+}
+
+.info-area__height {
+  height: 100vh;
+}

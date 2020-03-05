@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 
 import LabelContext from '../hooks/label-context';
+import InfoArea from './info-area';
 import InfoBorder from './info-border';
 import InfoBox from './info-box';
 import InfoLabel from './info-label';
@@ -22,11 +23,9 @@ import InfoIcon from './info-icon';
 13 Старая Деревня
 */
 
-const calc = (a, b = 0, c = 0) => `calc(3em * ${a} + 2em * ${b} + 4em * ${c})`;
-
 const InfoItem = props => {
   const labels = useContext(LabelContext);
-  const { icon, label, border, id } = props;
+  const { icon, label, border, area, id } = props;
   const source = !border ? labels.get(id) : null;
 
   switch (true) {
@@ -34,7 +33,7 @@ const InfoItem = props => {
       // Центр Города
       return (
         <InfoBox left align="right" style={{
-          bottom: [calc(1, 0, 1),0],
+          bottom: ['1, 0, 1',0],
           height: '3em'
         }}>
           <InfoLabel label={source} />
@@ -43,7 +42,7 @@ const InfoItem = props => {
     case id === 5 && icon:
       // Центр Города
       return (
-        <InfoBox align="right" style={{bottom: calc(2, 0, 1), left: [0, '-5em'], opacity: [1, 0]}}>
+        <InfoBox align="right" style={{bottom: '2,0,1', left: [0, '-5em'], opacity: [1, 0]}}>
           <InfoIcon label={source} />
         </InfoBox>
       );
@@ -52,7 +51,7 @@ const InfoItem = props => {
       return (
         <InfoBox
           style={{
-            bottom: calc(2, 1, 1),
+            bottom: '2,1,1',
             height: '3em',
             left: ['100%', 0],
             transform: ['translateX(0)', 'translateX(-100%)']
@@ -73,7 +72,7 @@ const InfoItem = props => {
         <InfoBox
           style={{
             left: 0,
-            bottom: calc(1, 0, 1),
+            bottom: '1,0,1',
             left: ['100%', 0],
             transform: ['translateX(0)', 'translateX(-100%)']
           }}
@@ -90,7 +89,7 @@ const InfoItem = props => {
     case id === 7 && label:
       // Петроградская сторона
       return (
-        <InfoBox style={{ height: '3em', bottom: [0, calc(2, 1, 1)] }} right align="left">
+        <InfoBox style={{ height: '3em', bottom: [0, '2,1,1'] }} right align="left">
           <InfoLabel label={source} />
         </InfoBox>
       );
@@ -119,31 +118,66 @@ const InfoItem = props => {
     case id === 11 && label:
       // Гутуевский остров
       return (
-        <InfoBox style={{ height: '3em', top: [0, calc(1, 1)], left: [0, '-5em'], opacity: [1, 0] }} left top align="right">
+        <InfoBox style={{ height: '3em', top: [0, '1,1'], left: [0, '-5em'], opacity: [1, 0] }} left top align="right">
           <InfoLabel label={source} />
         </InfoBox>
       );
     case id === 13 && label:
       // Старая Деревня
       return (
-        <InfoBox style={{ height: '3em', top: [calc(-1, -1), 0], right: ['-5em', 0], opacity: [0, 1] }} right top align="left">
+        <InfoBox style={{ height: '3em', top: ['-1,-1', 0], right: ['-5em', 0], opacity: [0, 1] }} right top align="left">
           <InfoLabel label={source} />
         </InfoBox>
       );
+    case id === 'top-left' && area:
+      var style = {
+        height: '1',
+        opacity: [1, 0],
+        top: [0, '1,1'],
+        left: [0, '-8em']
+      }
+      return <InfoArea style={style} left align="right"/>
+    case id === 'top-right' && area:
+      var style = {
+        height: '1',
+        opacity: [0, 1],
+        top: ['-1,-1', 0],
+        right: ['-8em', 0]
+      }
+      return <InfoArea style={style} right align="left"/>
+    case id === 'vo-right' && area:
+      var style = {
+        height: ['3,2', '4,3'],
+        bottom: '1,0,1',
+        right: [0, 'calc(100% + var(--layout-margin))'],
+        // transitionDelay: ['0s, 0s', '.2s, 0s'],
+        // width: ['50vw', 'var(--layout-margin)'],
+        width: 'var(--layout-margin)',
+        // opacity: [1, 0]
+      };
+      return <InfoArea style={style} align="left"/>
+    case id === 'center-right' && area:
+      return <InfoArea style={{height: ['1', '4,2,1']}} bottom right align="left"/>
+    case id === 'bottom-right' && area:
+      return <InfoArea top right height align="left"/>
+    case id === 'bottom-left' && area:
+      return <InfoArea style={{top: ['1,1', '3,2,1']}} left height align="right"/>
+    /*
     case id === 'bottom-left' && border:
-      return <InfoBorder bottom left style={{height: [calc(8, 5, 2), calc(6, 4, 1)]}}/>
+      return <InfoBorder bottom left style={{height: ['8,5,2', '6,4,1']}}/>
     case id === 'bottom-right' && border:
-      return <InfoBorder bottom right style={{height: calc(5, 4)}}/>
+      return <InfoBorder bottom right style={{height: '5,4'}}/>
     case id === 'center-right' && border:
-      return <InfoBorder bottom right style={{height: [calc(1), calc(4, 2, 1)]}}/>
+      return <InfoBorder bottom right style={{height: ['1', '4,2,1']}}/>
     case id === 'top-right' && border:
-      return <InfoBorder top right style={{height: calc(1)}}/>
+      return <InfoBorder top right style={{height: '1'}}/>
     case id === 'top-left' && border:
-      return <InfoBorder top left style={{height: calc(1)}}/>
+      return <InfoBorder top left style={{height: '1'}}/>
     case id === 'vo-left' && border:
-      return <InfoBorder style={{bottom: calc(1, 0, 1), right: [0, 'calc(100% + var(--layout-margin))'], height: calc(2, 2), opacity: [1, 0]}}/>
+      return <InfoBorder style={{bottom: '1,0,1', right: [0, 'calc(100% + var(--layout-margin))'], height: '2,2', opacity: [1, 0]}}/>
     case id === 'vo-right' && border:
-      return <InfoBorder style={{bottom: calc(1, 0, 1), left: ['calc(100% + var(--layout-margin))', 0], height: calc(3, 3), opacity: [0, 1]}}/>
+      return <InfoBorder style={{bottom: '1,0,1', left: ['calc(100% + var(--layout-margin))', 0], height: '3,3', opacity: [0, 1]}}/>
+    */
     default:
       return null;
   }

@@ -14,10 +14,10 @@ const BranchSwitcher = props => {
   return (
     <div className={classNames.branchSwitcher + (mode ? ' ' + classNames.switched : '') }>
       <BridgeList bridges={constant}>
-      {/* <InfoItem id="top-right" border /> */}
-      {/* <InfoItem id="top-left" border /> */}
-      {/* <InfoItem id={13} label /> */}
-      {/* <InfoItem id={11} label /> */}
+        <InfoItem id="top-right" area />
+        <InfoItem id="top-left" area />
+        {/* <InfoItem id={13} label /> */}
+        {/* <InfoItem id={11} label /> */}
       </BridgeList>
       <div className={classNames.branchSwitcher__wrapper}>
         <div className={classNames.branchSwitcher__carousel + ' transitionable'}>
@@ -26,6 +26,7 @@ const BranchSwitcher = props => {
           ))}
         </div>
       </div>
+      <InfoItem id="bottom-left" area />
     </div>
   );
 };
