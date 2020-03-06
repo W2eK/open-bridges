@@ -21,6 +21,8 @@
   --color-active: #222222;
   --color-inactive: #b3b3b3;
   --color-land: #f6f6f6;
+  --color-positive: #222222;
+  --color-negative: #222222;
   --color-positive: #37efba;
   --color-negative: #ff7272;
   overflow-x: hidden;

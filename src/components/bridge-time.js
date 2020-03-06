@@ -7,7 +7,7 @@ const BridgeTime = props => {
   const flexes = [segments[0] + segments[1] + middle, segments[3] + segments[4] + middle];
   const labels = schedule.map((time, i) => <span key={i} className={i === current ? classNames.bridgeTime__active : null}>{time}</span>)
   const spans = !moveable
-  ? <span>{description}&nbsp;<span className={classNames.bridgeTime__active}>•</span></span>
+  ? <span>{description}</span>
   : new Array(schedule.length / 2).fill().map((x, i) =>
     <span key={i} style={{flex: flexes[i]}}>
       {labels[i * 2]}

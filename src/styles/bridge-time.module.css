@@ -11,8 +11,22 @@
   color: var(--color-positive);
 }
 
+.bridge-time__active:nth-child(odd)::after {
+  content: '↑';
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 0;
+}
+
 .bridge-time__active:nth-child(even) {
   color: var(--color-negative);
+}
+
+.bridge-time__active:nth-child(even)::before {
+  content: '↓';
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 0;
 }
 
 .bridge-time span {

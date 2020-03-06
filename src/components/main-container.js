@@ -15,7 +15,7 @@ import classNames from '../styles/main-container.module.css';
 const MainContainer = props => {
   const { branches, setLang } = props;
   const [mode, setMode] = useState(0);
-  const [time, setTime] = useState('3:00');
+  const [time, setTime] = useState('3:35');
   window.addGlobalVariables({ mode, setMode, time, setTime });
   return (
     <TimeProvider value={time}>
