@@ -13,7 +13,9 @@ const BranchSwitcher = props => {
   const switchable = [branches.get(1), branches.get(2)];
   return (
     <div className={classNames.branchSwitcher + (mode ? ' ' + classNames.switched : '') }>
-      <BridgeList bridges={constant} />
+      <BridgeList bridges={constant}>
+        <InfoItem id={14} river />
+      </BridgeList>
       <div className={classNames.branchSwitcher__wrapper}>
         <div className={classNames.branchSwitcher__carousel + ' transitionable'}>
           {switchable.map((branch, i) => (

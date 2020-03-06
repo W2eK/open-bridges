@@ -24,7 +24,9 @@ const MainContainer = props => {
           <BranchSelector rivers={[1, 2]} />
           <main className="constraint">
             <BranchSwitcher branches={branches} />
-            <div className={classNames.mainContainer__gap} />
+            <div className={classNames.mainContainer__gap}>
+              <InfoItem id={1} river />
+            </div>
             <BridgeList bridges={branches.get(3)}>
               <InfoItem id="top-right" area />
               <InfoItem id="top-left" area />
@@ -40,13 +42,18 @@ const MainContainer = props => {
               <InfoItem id={13} label />
               <InfoItem id={11} label />
             </BridgeList>
-            <div className={classNames.mainContainer__gap} />
+            <div className={classNames.mainContainer__gap}>
+              <InfoItem id={4} river />
+            </div>
             <BridgeList bridges={branches.get(4)}>
               <InfoItem id="bottom-right" area />
               <InfoItem id={8} label />
               <InfoItem id={9} />
               <InfoItem id={10} label />
             </BridgeList>
+            <div className={classNames.mainContainer__gap}>
+              <InfoItem id={15} river />
+            </div>
             <MainTime />
           </main>
           {/* <AppLogo setLang={setLang} /> */}

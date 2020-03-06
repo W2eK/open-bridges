@@ -20,7 +20,7 @@ const parseValue = str => {
 
 const withMode = Wrapped => props => {
   const { mode, setMode } = useContext(ModeContext);
-  const { style, top, right, bottom, left, align = '', ...otherProps } = props;
+  const { style, top, right, bottom, left, align = '', label, ...otherProps } = props;
   const computedStyle = Object.entries({ top, right, bottom, left }).reduce(
     (style, [key, value]) => {
       if (value) style[key] = 0;
@@ -38,7 +38,7 @@ const withMode = Wrapped => props => {
   if(align === 'right') computedStyle.transform = 'translateX(-100%)'
   if(align === 'left') computedStyle.transform = 'translateX(100%)';
   computedStyle.transitionProperty = transitionProperty.join(', ');
-  return <Wrapped onClick={setMode} { ...otherProps } align={align} style={computedStyle} transitionable={transitionProperty.length > 0}/>;
+  return <Wrapped { ...otherProps } onClick={setMode} label={Array.isArray(label) ? label[mode] : label} align={align} style={computedStyle} transitionable={transitionProperty.length > 0}/>;
 };
 
 export default withMode;

@@ -89,5 +89,19 @@
       "en": "Staraya Derevnya",
       "ru": "Старая Деревня"
     }
+  },
+  {
+    "id": 14,
+    "name": {
+      "en": "Gulf of Finland",
+      "ru": "Финский залив"
+    }
+  },
+  {
+    "id": 15,
+    "name": {
+      "en": "Ladoga",
+      "ru": "Ладога"
+    }
   }
 ]

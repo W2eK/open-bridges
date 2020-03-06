@@ -9,13 +9,16 @@
 
 .info-area__left {
   background: linear-gradient(to right, #ddd 50%, white);
+  /* background: linear-gradient(to right, #f5f5f5 50%, white); */
 }
 
 .info-area__right {
+  /* background: linear-gradient(to left, #f5f5f5 50%, white); */
   background: linear-gradient(to left, #ddd 50%, white);
 }
 
 .info-area div {
+  /* display: none; */
   height: 100%;
   width: 100%;
   background-color: white;
@@ -24,5 +27,5 @@
 
 
 .info-area__height {
-  height: 100vh;
+  height: 200vh;
 }

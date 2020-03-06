@@ -1,0 +1,30 @@
+.info-river {
+  width: calc(100% - var(--layout-padding));
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-river span {
+  color: var(--color-inactive);
+  font-style: italic;
+  font-size: .75em;
+  width: min-content;
+  text-align: center;
+}
+
+.info-river span + span {
+  margin-left: .5em;
+}
+
+.info-river span:nth-child(odd) {
+  display: none;
+  color: #BBDEFB;
+  letter-spacing: .1em;
+}
+
+.info-river.info-river__waves span {
+  display: initial;
+  width: initial;
+}

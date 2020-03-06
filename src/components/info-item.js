@@ -2,33 +2,38 @@ import React, { useContext } from 'react';
 
 import LabelContext from '../hooks/label-context';
 import InfoArea from './info-area';
-import InfoBorder from './info-border';
 import InfoBox from './info-box';
 import InfoLabel from './info-label';
 import InfoIcon from './info-icon';
-
-/*
-1 Большая Нева
-2 Малая Нева
-3 Нева
-4 Большая Невка
-5 Центр Города
-6 Васильевский остров
-7 Петроградская сторона
-8 Выборгская сторона
-9 Пески
-10 Обухово
-11 Гутуевский остров
-12 Приморская
-13 Старая Деревня
-*/
+import InfoRiver from './info-river';
 
 const InfoItem = props => {
   const labels = useContext(LabelContext);
-  const { icon, label, border, area, id } = props;
-  const source = !border ? labels.get(id) : null;
-
+  const { icon, label, area, river, id } = props;
+  const source = labels.get(id)
   switch (true) {
+    // Большая Нева / Малая Нева
+    case id === 1 && river:
+      var style = {
+        transform: ['translateX(50%)', 'translateX(-50%)']
+      }
+      return <InfoRiver style={style} label={[labels.get(2), source]} clickable/>
+    case id === 4 && river:
+      // Большая Невка
+      var style = {
+        transform: 'translateX(50%)'
+      }
+      return <InfoRiver style={style} label={source}/>
+    case id === 14 && river:
+      // Финский Залив
+      var style = {
+        position: 'absolute',
+        top: '-4em'
+      }
+      return <InfoRiver style={style} label={source} waves/>
+    case id === 15 && river:
+      // Ладога
+      return <InfoRiver label={source} waves/>
     case id === 5 && label:
       // Центр Города
       var boxStyle = {
@@ -87,15 +92,15 @@ const InfoItem = props => {
     case id === 7 && label:
       // Петроградская сторона
       return (
-        <InfoBox style={{ bottom: [0, '2,1,1'] }} right clickable align="left">
-          <InfoLabel label={source} />
+        <InfoBox style={{ bottom: [0, '2,1,1'] }} right align="left">
+          <InfoLabel label={source} clickable />
         </InfoBox>
       );
     case id === 7 && icon:
       // Петроградская сторона
       return (
-        <InfoBox style={{ bottom: [0, '1'], opacity: [0, 1] }} right clickable align="left">
-          <InfoIcon label={source} />
+        <InfoBox style={{ bottom: [0, '1'], opacity: [0, 1] }} right align="left">
+          <InfoIcon label={source} clickable />
         </InfoBox>
       );
     case id === 8 && label:
@@ -175,6 +180,7 @@ const InfoItem = props => {
         bottom: '1,0,1',
         right: [0, 'calc(100% + var(--layout-margin))'],
         background: ['linear-gradient(to right, #ddd 50%, white)', 'linear-gradient(to right, white, #ddd 50%)'],
+        // background: ['linear-gradient(to right, #f5f5f5 50%, white)', 'linear-gradient(to right, white, #f5f5f5 50%)'],
         width: 'var(--layout-margin)'
       };
       return <InfoArea style={style} align="left"/>

@@ -3,9 +3,9 @@
 }
 
 .main-container main {
-  margin: 6em 0 2em;
+  margin-top: 6em ;
 }
 
 .main-container__gap {
-  margin-top: var(--layout-gap);
+  height: var(--layout-gap);
 }

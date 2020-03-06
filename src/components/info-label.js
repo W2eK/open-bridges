@@ -7,7 +7,6 @@ import classNames from '../styles/info-label.module.css';
 
 const InfoLabel = props => {
   const { label: { name }, style, clickable, transitionable, onClick } = props;
-  console.log(transitionable)
   const className = [
     transitionable ? 'transitionable' : '',
     clickable ? 'clickable' : ''
