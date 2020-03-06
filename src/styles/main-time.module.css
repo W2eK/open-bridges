@@ -15,18 +15,10 @@
 }
 
 .main-time div {
+  margin-right: var(--layout-padding);
   position: absolute;
   height: 100%;
   background-color: black;
   opacity: .035;
-  box-sizing: border-box;
-}
-
-.main-time div:first-child {
-  width: 1000%;
-  margin-left: -1000%;
-}
-
-.main-time div:last-child {
-  transition: width 60s linear;
+  width: 1000vw;
 }

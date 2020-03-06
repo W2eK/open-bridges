@@ -15,7 +15,7 @@ import classNames from '../styles/main-container.module.css';
 const MainContainer = props => {
   const { branches, setLang } = props;
   const [mode, setMode] = useState(0);
-  const [time, setTime] = useState('3:35');
+  const [time, setTime] = useState('3:00');
   window.addGlobalVariables({ mode, setMode, time, setTime });
   return (
     <TimeProvider value={time}>
@@ -54,8 +54,8 @@ const MainContainer = props => {
             <div className={classNames.mainContainer__gap}>
               <InfoItem id={15} river />
             </div>
-            <MainTime />
           </main>
+          <MainTime />
           {/* <AppLogo setLang={setLang} /> */}
         </div>
       </ModeProvider>

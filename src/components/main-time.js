@@ -5,12 +5,12 @@ import classNames from '../styles/main-time.module.css';
 
 const MainTime = () => {
   const time = useContext(TimeContext);
-  const width = `calc(${scaler(parseTime(time)) * 100}% - var(--layout-padding))`;
+  const scaled = scaler(parseTime(time));
+  const right = `calc((100% - var(--layout-padding) * 2) * ${1 - scaled})`;
   return (
-    <div className={classNames.mainTime__wrapper + ' wrapper'}>
+    <div className={classNames.mainTime__wrapper + ' constraint'}>
       <div className={classNames.mainTime}>
-        <div></div>
-        <div style={{ width }}></div>
+        <div style={{ right }}></div>
       </div>
     </div>
   );

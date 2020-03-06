@@ -12,8 +12,7 @@ const BridgeItem = props => {
   const time = useContext(TimeContext);
   const parsed = [0, ...schedule.map(parseTime), DURATION];
   const segments = parsed.slice(1).map((n, i) => n - parsed[i]);
-  const current = Math.max(parsed.findIndex(x => x > parseTime(time)) - 1, 0);
-  // console.log(current, parseTime(time))
+  const current = parsed.findIndex(x => x > parseTime(time)) - 1;
   return (
     <li className={classNames.bridgeItem}>
       <h4 className={current % 2 ? classNames.bridgeItem__inactive : null}>
