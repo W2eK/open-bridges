@@ -12,9 +12,9 @@ const InfoRiver = props => {
     waves ? classNames.infoRiver__waves : ''
   ].join(' ');
   return <div className={className} style={style}>
-    <span>〜〜〜〜〜</span>
+    <span></span>
     <span onClick={clickable ? onClick : null}>{name}</span>
-    <span>〜〜〜〜〜</span>
+    <span></span>
   </div>
 }
 

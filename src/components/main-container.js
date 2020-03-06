@@ -51,8 +51,8 @@ const MainContainer = props => {
               <InfoItem id={9} />
               <InfoItem id={10} label />
             </BridgeList>
-            <div className={classNames.mainContainer__gap}>
-              <InfoItem id={15} river />
+            <div className={classNames.mainContainer__gap} style={{marginTop: '1em'}}>
+              <InfoItem id={15} river/>
             </div>
           </main>
           <MainTime />

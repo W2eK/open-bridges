@@ -11,7 +11,7 @@
 
 .bridge-progress__segments:nth-child(even) {
   border-bottom-style: dashed;
-  border-color: #BBDEFB;
+  border-color: var(--color-water);
 }
 
 div.bridge-progress__dot {

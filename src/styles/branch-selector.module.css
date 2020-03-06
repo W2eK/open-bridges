@@ -8,6 +8,8 @@
   display: flex;
   height: var(--layout-nav);
   color: var(--color-inactive);
+  max-width: 30em;
+  margin: 0 auto;
 }
 .branch-selector li {
   flex: 1;

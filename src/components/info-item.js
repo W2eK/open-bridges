@@ -28,7 +28,9 @@ const InfoItem = props => {
       // Финский Залив
       var style = {
         position: 'absolute',
-        top: '-4em'
+        top: '-1,-1',
+        width: 'calc(100% - var(--layout-padding) * 2)',
+        padding: 0
       }
       return <InfoRiver style={style} label={source} waves/>
     case id === 15 && river:

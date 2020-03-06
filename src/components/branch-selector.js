@@ -31,17 +31,17 @@ const BranchSelector = props => {
   return (
     <MainFixed height="var(--layout-nav)">
       <nav className={classNames.branchSelector}>
-        <div className="constraint">
-          <ul>
-            {inputs}
-            <span
-              className={classNames.branchSelector__outline + ' transitionable'}
-              style={{
-                width: `${spanWidth}%`,
-                left: `${mode * spanWidth}%`
-              }}
-            />
-          </ul>
+        <ul>
+          {inputs}
+          <span
+            className={classNames.branchSelector__outline + ' transitionable'}
+            style={{
+              width: `${spanWidth}%`,
+              left: `${mode * spanWidth}%`
+            }}
+          />
+        </ul>
+        <div>
         </div>
       </nav>
     </MainFixed>

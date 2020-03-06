@@ -1,9 +1,10 @@
 .info-river {
-  width: calc(100% - var(--layout-padding));
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 var(--layout-padding);
 }
 
 .info-river span {
@@ -20,8 +21,8 @@
 
 .info-river span:nth-child(odd) {
   display: none;
-  color: #BBDEFB;
-  letter-spacing: .1em;
+  flex: 1;
+  border-bottom: 1px dashed var(--color-water);
 }
 
 .info-river.info-river__waves span {
