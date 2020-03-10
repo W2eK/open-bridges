@@ -10,12 +10,10 @@
 .main-time {
   width: 100%;
   height: 100%;
-  padding: 0 var(--layout-padding);
   position: relative;
 }
 
 .main-time div {
-  margin-right: var(--layout-padding);
   position: absolute;
   height: 100%;
   background-color: black;

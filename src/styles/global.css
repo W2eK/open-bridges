@@ -23,7 +23,7 @@
   --color-background: #ffffff;
   --color-active: #222222;
   --color-inactive: #b3b3b3;
-  --color-transperent: rgba(255, 255, 255, 0.3);
+  --color-transparent: rgba(255, 255, 255, 0.3);
   --color-land: #f6f6f6;
   --color-positive: #37efba;
   --color-negative: #ff7272;
@@ -34,6 +34,13 @@
 
 .constraint {
   padding: 0 14vw;
+}
+
+.constraint.padding {
+  padding: 0 calc(14vw + var(--layout-padding));
+}
+.constraint.padding > * {
+  max-width: calc(var(--layout-max-width) - var(--layout-padding) * 2);
 }
 .constraint > * {
   max-width: var(--layout-max-width);

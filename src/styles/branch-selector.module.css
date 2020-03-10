@@ -6,7 +6,7 @@
 .branch-selector ul {
   display: flex;
   height: var(--layout-nav);
-  color: var(--color-transperent);
+  color: var(--color-transparent);
   max-width: var(--layout-max-width);
   margin: 0 auto;
 }

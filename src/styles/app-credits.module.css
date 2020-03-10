@@ -1,6 +1,6 @@
 .app-credits {
   /*  */
-  color: var(--color-transperent);
+  color: var(--color-transparent);
   /* margin: 0 auto; */
   /* max-width: calc(var(--layout-max-width) + var(--layout-padding) * 2); */
   padding: .25em;
@@ -17,6 +17,6 @@
   margin-left: 1em;
 }
 .app-credits a {
-  color: var(--color-transperent);
+  color: var(--color-transparent);
   text-decoration: none;
 }

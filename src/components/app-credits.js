@@ -5,7 +5,6 @@ import classNames from '../styles/app-credits.module.css';
 const AppCredits = props => {
   const { credits } = props;
   const links = credits.map(({ type, name, site }) => {
-    console.log(site)
     return (
       <span key={type}>
         {type}:{' '}
