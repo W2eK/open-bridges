@@ -6,8 +6,8 @@
 .branch-selector ul {
   display: flex;
   height: var(--layout-nav);
-  color: var(--color-inactive);
-  max-width: 30em;
+  color: var(--color-transperent);
+  max-width: var(--layout-max-width);
   margin: 0 auto;
 }
 .branch-selector li {

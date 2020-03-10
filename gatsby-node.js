@@ -98,6 +98,24 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
       }
     }
   })
-  const typeDefs = [BridgesJson, LabelsJson, SiteMetadata];
+  const SiteCredits = buildObjectType({
+    name: 'SiteSiteMetadataCredits',
+    fields: {
+      type: {
+        type: 'String!',
+        extensions: {
+          lang: {}
+        }
+      },
+      name: {
+        type: 'String!',
+        extensions: {
+          lang: {}
+        }
+      }
+    }
+
+  })
+  const typeDefs = [BridgesJson, LabelsJson, SiteMetadata, SiteCredits];
   createTypes(typeDefs);
 };

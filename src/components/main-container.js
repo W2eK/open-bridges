@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { TimeProvider } from '../hooks/time-context';
 import { ModeProvider } from '../hooks/mode-context';
 
-import AppLogo from './app-bar';
+import AppBar from './app-bar';
 import BranchSelector from './branch-selector';
 import BranchSwitcher from './branch-switcher';
 import BridgeList from './bridge-list';
@@ -13,7 +13,7 @@ import MainTime from './main-time';
 import classNames from '../styles/main-container.module.css';
 
 const MainContainer = props => {
-  const { branches, setLang } = props;
+  const { branches, setLang, credits } = props;
   const [mode, setMode] = useState(0);
   const [time, setTime] = useState('3:00');
   window.addGlobalVariables({ mode, setMode, time, setTime });
@@ -56,7 +56,7 @@ const MainContainer = props => {
             </div>
           </main>
           <MainTime />
-          <AppLogo setLang={setLang} />
+          <AppBar setLang={setLang} credits={credits}/>
         </div>
       </ModeProvider>
     </TimeProvider>

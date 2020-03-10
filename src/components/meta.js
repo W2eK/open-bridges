@@ -2,7 +2,8 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 const Meta = ({meta}) => {
-  const {title, description, author, lang} = meta;
+  const {title, description, credits, lang} = meta;
+  const author = credits[0].name;
   return (
     <Helmet
       htmlAttributes={{ lang }}

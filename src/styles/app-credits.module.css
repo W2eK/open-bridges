@@ -1,0 +1,22 @@
+.app-credits {
+  /*  */
+  color: var(--color-transperent);
+  margin: 0 auto;
+  max-width: calc(var(--layout-max-width) + var(--layout-padding) * 2);
+  padding: .25em;
+}
+
+.app-credits p {
+  width: 100%;
+  font-size: .6em;
+  line-height: .5rem;
+  /* text-align: center; */
+}
+
+.app-credits span + span {
+  margin-left: 1em;
+}
+.app-credits a {
+  color: var(--color-transperent);
+  text-decoration: none;
+}

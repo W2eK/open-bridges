@@ -39,7 +39,7 @@ const App = props => {
   return (
     <LabelProvider value={labels}>
       <Meta meta={siteMetadata} />
-      <MainContainer branches={branches} labels={labels} setLang={setLang} />
+      <MainContainer branches={branches} setLang={setLang} credits={siteMetadata.credits} />
     </LabelProvider>
   );
 };
@@ -51,7 +51,11 @@ export const query = graphql`
       siteMetadata {
         title(lang: $lang)
         description(lang: $lang)
-        author
+        credits {
+          name
+          type
+          site
+        }
         languages {
           langs
           fallback

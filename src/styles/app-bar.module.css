@@ -1,30 +1,28 @@
-.app-bar__wrapper {
+.app-bar {
   background-color: var(--color-active);
   position: fixed;
   bottom: 0;
-}
-
-.app-bar {
-  max-width: 30em;
-  margin: 0 auto;
+  /* height: var(--layout-bar); */
 }
 
 .app-bar__buttons {
-  display: flex;
-  height: 100%;
-  justify-content: flex-end;
-  align-items: center;
-  height: var(--layout-bar);
-  /* margin-right: -1em; */
-  /* width: calc(100% + 1em); */
-}
-.app-bar button {
-  padding: .75em;
-  cursor: pointer;
+  max-width: calc(var(--layout-max-width) + var(--layout-padding) * 2);
+  margin: 0 auto;
 }
 
-.app-bar button:last-child {
-  margin-right: 1em;
+.app-bar__buttons ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.app-bar__buttons button {
+  padding: .75em;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.app-bar__buttons li:last-child {
+  margin-right: var(--layout-padding);
 }
 
 .app-bar button:disabled {
