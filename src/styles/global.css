@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700&display=swap&subset=cyrillic');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Outlined');
+/* @import url('https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp'); */
 /* @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap'); */
 @import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
 
@@ -14,7 +15,8 @@
   --item-margin: 2em;
   --item-gap: 4em;
   */
-  --layout-nav: 4em;
+  --layout-nav: 3em;
+  --layout-bar: 4em;
   --layout-margin: 8em;
   --transition-time: .4s;
   --color-background: #ffffff;
@@ -25,6 +27,7 @@
   --color-negative: #222222;
   --color-positive: #37efba;
   --color-negative: #ff7272;
+  --color-primary: #222222;
   --color-water: #BBDEFB;
   overflow-x: hidden;
 }
@@ -72,27 +75,16 @@ button {
   cursor: pointer !important;
 }
 
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px; /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
+/* Rules for sizing the icon. */
+.material-icons-outlined.md-18 { font-size: 18px; }
+.material-icons-outlined.md-24 { font-size: 24px; }
+.material-icons-outlined.md-36 { font-size: 36px; }
+.material-icons-outlined.md-48 { font-size: 48px; }
 
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
+/* Rules for using icons as black on a light background. */
+.material-icons-outlined.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons-outlined.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
 
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: 'liga';
-}
+/* Rules for using icons as white on a dark background. */
+.material-icons-outlined.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons-outlined.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }

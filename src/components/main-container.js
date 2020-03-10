@@ -56,7 +56,7 @@ const MainContainer = props => {
             </div>
           </main>
           <MainTime />
-          {/* <AppLogo setLang={setLang} /> */}
+          <AppLogo setLang={setLang} />
         </div>
       </ModeProvider>
     </TimeProvider>

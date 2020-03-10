@@ -1,20 +1,29 @@
 .app-bar__wrapper {
   background-color: white;
-  position: relative;
-  z-index: 2;
+  background-color: var(--color-primary);
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0 0 28px rgba(0,0,0,0.25), 0 0 10px rgba(0,0,0,0.22);
 }
 .app-bar {
   display: flex;
-  height: 4em;
+  height: 100%;
+  justify-content: flex-end;
   align-items: center;
-}
-.app-bar h1 {
-  margin-right: .75em;
+  height: var(--layout-bar);
+  width: 100%;
+  max-width: calc(30em + 2em);
+  margin: 0 auto;
 }
 .app-bar button {
   padding: .75em;
+  cursor: pointer;
 }
 
 .app-bar button:last-child {
-  margin-right: -.75em;
+  margin-right: 1em;
+}
+
+.app-bar button:disabled {
+  cursor: initial;
 }

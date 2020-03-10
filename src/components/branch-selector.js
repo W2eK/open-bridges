@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 
 import ModeContext from '../hooks/mode-context';
 import LabelContext from '../hooks/label-context';
-import MainFixed from './main-fixed.js';
+import MainFixed from './main-fixed';
 import classNames from '../styles/branch-selector.module.css';
 
 const BranchSelector = props => {
