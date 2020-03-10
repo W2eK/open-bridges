@@ -1,8 +1,8 @@
 .app-credits {
   /*  */
   color: var(--color-transperent);
-  margin: 0 auto;
-  max-width: calc(var(--layout-max-width) + var(--layout-padding) * 2);
+  /* margin: 0 auto; */
+  /* max-width: calc(var(--layout-max-width) + var(--layout-padding) * 2); */
   padding: .25em;
 }
 

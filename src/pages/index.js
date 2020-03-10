@@ -52,8 +52,8 @@ export const query = graphql`
         title(lang: $lang)
         description(lang: $lang)
         credits {
-          name
-          type
+          name(lang: $lang)
+          type(lang: $lang)
           site
         }
         languages {
