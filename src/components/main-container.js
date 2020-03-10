@@ -15,10 +15,11 @@ import classNames from '../styles/main-container.module.css';
 const MainContainer = props => {
   const { branches, setLang, credits } = props;
   const [mode, setMode] = useState(0);
-  const [time, setTime] = useState('3:00');
+  const [now] = useState('3:00');
+  const [time, setTime] = useState(now);
   window.addGlobalVariables({ mode, setMode, time, setTime });
   return (
-    <TimeProvider value={time}>
+    <TimeProvider value={{ time, setTime, now }}>
       <ModeProvider value={{ mode, setMode: () => setMode(i => (i ? 0 : 1)) }}>
         <div className={classNames.mainContainer}>
           <BranchSelector rivers={[1, 2]} />
@@ -51,12 +52,15 @@ const MainContainer = props => {
               <InfoItem id={9} />
               <InfoItem id={10} label />
             </BridgeList>
-            <div className={classNames.mainContainer__gap} style={{marginTop: '1em'}}>
-              <InfoItem id={15} river/>
+            <div
+              className={classNames.mainContainer__gap}
+              style={{ marginTop: '1em' }}
+            >
+              <InfoItem id={15} river />
             </div>
           </main>
           <MainTime />
-          <AppBar setLang={setLang} credits={credits}/>
+          <AppBar setLang={setLang} credits={credits} />
         </div>
       </ModeProvider>
     </TimeProvider>

@@ -9,7 +9,7 @@ import classNames from '../styles/bridge-item.module.css';
 
 const BridgeItem = props => {
   const { name, moveable, schedule, description } = props;
-  const time = useContext(TimeContext);
+  const { time } = useContext(TimeContext);
   const parsed = [0, ...schedule.map(parseTime), DURATION];
   const segments = parsed.slice(1).map((n, i) => n - parsed[i]);
   const current = parsed.findIndex(x => x > parseTime(time)) - 1;

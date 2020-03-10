@@ -4,7 +4,7 @@ import TimeContext from '../hooks/time-context';
 import classNames from '../styles/main-time.module.css';
 
 const MainTime = () => {
-  const time = useContext(TimeContext);
+  const { time } = useContext(TimeContext);
   const scaled = scaler(parseTime(time));
   const right = `calc((100% - var(--layout-padding) * 2) * ${1 - scaled})`;
   return (
