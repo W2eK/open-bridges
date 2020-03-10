@@ -30,7 +30,7 @@ const BranchSelector = props => {
   const spanWidth = 100 / rivers.length;
   return (
     <MainFixed height="var(--layout-nav)">
-      <nav className={classNames.branchSelector}>
+      <nav className={classNames.branchSelector + ' elevation-4'}>
         <ul>
           {inputs}
           <span

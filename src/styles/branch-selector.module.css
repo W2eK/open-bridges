@@ -1,8 +1,7 @@
 .branch-selector {
   top: 0;
   z-index: 2;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  background-color: white;
+  background-color: var(--color-active);
 }
 .branch-selector ul {
   display: flex;
@@ -33,14 +32,14 @@
 }
 
 .branch-selector input[type="radio"]:checked+label {
-  color: var(--color-active);
+  color: white;
   cursor: default;
 }
 
 .branch-selector__outline {
-  background-color: var(--color-active);
+  background-color: var(--color-primary);
   position: absolute;
   bottom: 0;
-  height: 1px;
+  height: 2px;
   transition-property: left;
 }
