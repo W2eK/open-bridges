@@ -11,5 +11,7 @@
 }
 
 .bridge-item h4 {
+  transition-property: color;
+  transition-duration: .2s;
   cursor: pointer;
 }

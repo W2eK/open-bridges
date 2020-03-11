@@ -15,7 +15,7 @@ const BridgeItem = props => {
   const current = parsed.findIndex(x => x > parseTime(time)) - 1;
   return (
     <li className={classNames.bridgeItem}>
-      <h4 className={(current % 2) && current > -1 ? classNames.bridgeItem__inactive : null}>
+      <h4 className={((current % 2) && current > -1 ? classNames.bridgeItem__inactive : '') + ' transitionable'}>
         {name}
       </h4>
       <BridgeProgress

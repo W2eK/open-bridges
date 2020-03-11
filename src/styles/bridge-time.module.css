@@ -31,6 +31,8 @@
 
 .bridge-time span {
   font-size: .875rem;
+  transition-property: color;
+  transition-duration: .2s;
 }
 
 .bridge-time span + span {
