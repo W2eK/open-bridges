@@ -20,6 +20,8 @@
   --layout-margin: 8em;
   --layout-max-width: 30em;
   --transition-time: .4s;
+  --transition-ease: ease-out;
+  --transition-delay: 0s;
   --color-background: #ffffff;
   --color-active: #222222;
   --color-inactive: #b3b3b3;
@@ -74,9 +76,9 @@ button {
 
 .transitionable {
   transition-duration: var(--transition-time);
-  transition-timing-function: ease-out;
+  transition-delay: var(--transition-delay);
+  transition-timing-function: var(--transition-ease);
 }
-
 .clickable {
   pointer-events: all !important;
   cursor: pointer !important;

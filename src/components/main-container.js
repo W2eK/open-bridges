@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { TimeProvider } from '../hooks/time-context';
 import { ModeProvider } from '../hooks/mode-context';
@@ -16,14 +16,23 @@ if(typeof window === 'undefined') var window = {addGlobalVariables: () => {}}
 
 const MainContainer = props => {
   const { branches, setLang, credits } = props;
-  const [mode, setMode] = useState(0);
+  const [init, setInit] = useState(true);
+  const [mode, setMode] = useState(1);
   const [now] = useState('3:00');
   const [time, setTime] = useState(now);
   window.addGlobalVariables({ mode, setMode, time, setTime });
+  useEffect(() => {
+    setTimeout(() => {
+      setMode(0);
+    }, 500)
+    setTimeout(() => {
+      setInit(false);
+    }, 1500)
+  }, [])
   return (
     <TimeProvider value={{ time, setTime, now }}>
       <ModeProvider value={{ mode, setMode: () => setMode(i => (i ? 0 : 1)) }}>
-        <div className={classNames.mainContainer}>
+        <div className={classNames.mainContainer + ' ' + (init ? classNames.mainContainer__init : '')}>
           <BranchSelector rivers={[1, 2]} />
           <main className="constraint">
             <BranchSwitcher branches={branches} />
