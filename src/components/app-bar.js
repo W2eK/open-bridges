@@ -1,7 +1,7 @@
 import React from 'react';
 
 import MainFixed from './main-fixed';
-import AppSlider from './app-slider';
+import AppProgress from './app-progress';
 import AppCredits from './app-credits';
 import classNames from '../styles/app-bar.module.css';
 
@@ -10,7 +10,7 @@ const AppBar = props => {
   return (
     <MainFixed height="var(--layout-bar)">
       <footer className={classNames.appBar + ' elevation-24'}>
-        <AppSlider/>
+        <AppProgress/>
         <div className={classNames.appBar__buttons}>
           <ul>
             <li>

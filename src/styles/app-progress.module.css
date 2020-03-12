@@ -1,58 +1,58 @@
-.app-slider {
+.app-progress {
   width: 100%;
   margin-bottom: calc(1em - 2px);
   /* padding: 0 var(--layout-padding); */
   position: relative;
 }
 
-.app-slider > div {
+.app-progress > div {
   height: 2px;
   background-color: var(--color-transparent);
 }
 
-.app-slider__side {
+.app-progress__side {
   top: 0;
   width: 200%;
   position: absolute;
   overflow: hidden;
 }
 
-.app-slider__side > div {
+.app-progress__side > div {
   width: 100vw;
   height: 2px;
   position: absolute;
   background-color: var(--color-primary);
 }
 
-.app-slider__side:first-child {
+.app-progress__side:first-child {
   left: 0;
   transform: translateX(-100%);
 }
 
-.app-slider__side:last-child {
+.app-progress__side:last-child {
   right: 0;
   transform: translateX(100%);
 }
 
-.app-slider__content {
+.app-progress__content {
   display: flex;
 }
 
-.app-slider__content > div:first-child {
+.app-progress__content > div:first-child {
   background-color: var(--color-primary);
 }
 
-.app-slider input {
+.app-progress input {
   width: 100%;
 }
 /*
-.app-slider input {
+.app-progress input {
   width: 100%;
   height: 1px;
   -webkit-appearance: none;
   appearance: none;
 }
-.app-slider input::-webkit-slider-thumb {
+.app-progress input::-webkit-progress-thumb {
   /* position: absolute; */
   /* transform: translateY(-25%); */
   /* -webkit-appearance: none; */
