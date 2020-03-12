@@ -1,7 +1,7 @@
 .branch-selector {
   top: 0;
   z-index: 2;
-  background-color: var(--color-active);
+  background-color: var(--color-primary);
 }
 .branch-selector ul {
   display: flex;
@@ -37,7 +37,7 @@
 }
 
 .branch-selector__outline {
-  background-color: var(--color-primary);
+  background-color: white;
   position: absolute;
   bottom: 0;
   height: 2px;
