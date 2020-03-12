@@ -13,10 +13,11 @@ const BridgeItem = props => {
   const parsed = [0, ...schedule.map(parseTime), DURATION];
   const segments = parsed.slice(1).map((n, i) => n - parsed[i]);
   const current = parsed.findIndex(x => x > parseTime(time)) - 1;
+  // 
   return (
     <li className={classNames.bridgeItem}>
       <h4 className={(current % 2) && current > -1 ? classNames.bridgeItem__inactive : null}>
-        {name}
+        {name}&nbsp;<span>•</span>
       </h4>
       <BridgeProgress
         segments={segments}

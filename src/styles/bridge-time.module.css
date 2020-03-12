@@ -5,10 +5,7 @@
 
 .bridge-time__active {
   font-weight: 700;
-}
-
-.bridge-time__active:nth-child(odd) {
-  color: var(--color-positive);
+  color: var(--color-active);
 }
 
 .bridge-time__active:nth-child(odd)::after {
@@ -16,10 +13,6 @@
   font-weight: normal;
   font-size: 1rem;
   line-height: 0;
-}
-
-.bridge-time__active:nth-child(even) {
-  color: var(--color-negative);
 }
 
 .bridge-time__active:nth-child(even)::before {
