@@ -1,13 +1,12 @@
 import React, { useContext } from 'react';
-import { FROM, TO, stringifyTime, parseTime, scaler } from '../utils/time-parser';
+import { parseTime, scaler } from '../utils/time-parser';
 import TimeContext from '../hooks/time-context';
+import AppSlider from './app-slider.js';
 import classNames from '../styles/app-progress.module.css';
 
 const AppProgress = () => {
-  const { time } = useContext(TimeContext);
-  const scaled = scaler(parseTime(time));
-  window.addGlobalVariables({ FROM, TO, stringifyTime, parseTime, scaler, scaled });
-  /* <input type="range" min={0} max={TO - FROM} value={parseTime(time)} onChange={handleChange} /> */
+  const { time, now, setTime } = useContext(TimeContext);
+  const scaled = scaler(parseTime(now));
   return (
     <div className="constraint padding">
       <div className={classNames.appProgress}>
@@ -16,7 +15,9 @@ const AppProgress = () => {
         </div>
         <div className={classNames.appProgress__content}>
           <div style={{flex: Math.max(Math.min(scaled, 1) ,0)}}/>
-          <div style={{flex: Math.max(Math.min(1 - scaled, 1) ,0)}}/>
+          <div style={{flex: Math.max(Math.min(1 - scaled, 1) ,0)}}>
+            <AppSlider {...{ time, now, setTime }}/>
+          </div>
         </div>
         <div className={classNames.appProgress__side}>
           <div style={{left: (scaled - 1) * 50 + '%', transform: 'translateX(-100%)'}}/>
