@@ -3,6 +3,8 @@ import { FROM, TO, stringifyTime, parseTime, scaler } from '../utils/time-parser
 import TimeContext from '../hooks/time-context';
 import classNames from '../styles/app-slider.module.css';
 
+if(typeof window === 'undefined') var window = {addGlobalVariables: () => {}}
+
 const AppSlider = () => {
   const { time } = useContext(TimeContext);
   const scaled = scaler(parseTime(time));

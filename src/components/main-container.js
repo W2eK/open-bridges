@@ -12,6 +12,8 @@ import MainTime from './main-time';
 
 import classNames from '../styles/main-container.module.css';
 
+if(typeof window === 'undefined') var window = {addGlobalVariables: () => {}}
+
 const MainContainer = props => {
   const { branches, setLang, credits } = props;
   const [mode, setMode] = useState(0);

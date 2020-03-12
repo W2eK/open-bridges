@@ -4,10 +4,9 @@
   "author": "Vladimir Osokin <osokin.home@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "cross-env GATSBY_GRAPHQL_IDE=playground gatsby develop -H 0.0.0.0 -p 8000",
+    "build": "rm -rf .cache && rm -rf public && gatsby build",
+    "develop": "rm -rf .cache && rm -rf public && cross-env GATSBY_GRAPHQL_IDE=playground gatsby develop -H 0.0.0.0 -p 8000",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
     "serve": "gatsby serve -H 0.0.0.0 -p 9000",
     "clean": "gatsby clean"
   },
