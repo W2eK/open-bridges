@@ -10,10 +10,6 @@
   color: var(--color-inactive);
 }
 
-.bridge-item h4 {
-  cursor: pointer;
-}
-
 .bridge-item h4 span {
   color: var(--color-positive);
 }

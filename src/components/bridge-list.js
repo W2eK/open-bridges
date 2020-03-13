@@ -8,7 +8,7 @@ const BridgeList = props => {
   const { bridges, children, invisible } = props;
   const items = bridges.map(bridge => <BridgeItem key={bridge.id} {...bridge}/>)
   return (
-    <ul className={classNames.bridgeList + ' transitionable'} style={{opacity: invisible ? 0 : 1}}>
+    <ul className={classNames.bridgeList + ' transitionable'} style={{opacity: invisible ? 0.2 : 1}}>
       {children}
       {items}
     </ul>

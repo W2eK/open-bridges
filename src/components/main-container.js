@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { TimeProvider } from '../hooks/time-context';
 import { ModeProvider } from '../hooks/mode-context';
+import { NOW } from '../utils/time-parser.js';
 
 import AppBar from './app-bar';
 import BranchSelector from './branch-selector';
@@ -17,9 +18,16 @@ if(typeof window === 'undefined') var window = {addGlobalVariables: () => {}}
 const MainContainer = props => {
   const { branches, setLang, credits } = props;
   const [mode, setMode] = useState(0);
-  const [now] = useState('3:00');
+  const [now, setNow] = useState('3:00');
   const [time, setTime] = useState(now);
   window.addGlobalVariables({ mode, setMode, time, setTime });
+  // const setNow
+  useEffect(() => {
+    const id = setInterval(() => {
+      setNow(NOW())
+    }, 60000)
+    return () => clearInterval(id);
+  })
   return (
     <TimeProvider value={{ time, setTime, now }}>
       <ModeProvider value={{ mode, setMode: () => setMode(i => (i ? 0 : 1)) }}>

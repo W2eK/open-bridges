@@ -8,7 +8,7 @@ import classNames from '../styles/branch-switcher.module.css';
 
 const BranchSwitcher = props => {
   const { branches } = props;
-  const { mode } = useContext(ModeContext);
+  const { mode, setMode } = useContext(ModeContext);
   const constant = branches.get(0);
   const switchable = [branches.get(1), branches.get(2)];
   return (
@@ -17,7 +17,7 @@ const BranchSwitcher = props => {
         <InfoItem id={14} river />
       </BridgeList>
       <div className={classNames.branchSwitcher__wrapper}>
-        <div className={classNames.branchSwitcher__carousel + ' transitionable'}>
+        <div className={classNames.branchSwitcher__carousel + ' transitionable'} onClick={setMode}>
           {switchable.map((branch, i) => (
             <BridgeList key={i} bridges={branch} invisible={i !== mode} />
           ))}

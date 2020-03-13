@@ -181,7 +181,7 @@ const InfoItem = props => {
         height: ['3,2', '4,3'],
         bottom: '1,0,1',
         right: [0, 'calc(100% + var(--layout-margin))'],
-        background: ['linear-gradient(to right, #ddd 50%, white)', 'linear-gradient(to right, white, #ddd 50%)'],
+        background: ['linear-gradient(to right, #ddd 50%, #f0f0f0)', 'linear-gradient(to right, #f0f0f0, #ddd 50%)'],
         // background: ['linear-gradient(to right, #f5f5f5 50%, white)', 'linear-gradient(to right, white, #f5f5f5 50%)'],
         width: 'var(--layout-margin)'
       };
