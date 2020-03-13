@@ -30,6 +30,7 @@
 ## Todo
 ### v0.3 Прототип
 * [x] Таймлайн
+* [ ] Slider
 * [ ] Snackbars
 * [ ] Modal Dialogs
 * [ ] Notification
